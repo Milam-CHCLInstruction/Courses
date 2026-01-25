@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkansas CHCL Course - Concealed Handgun Carry License Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        /* Navigation */
+        .nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav a:hover {
+            color: #3498db;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styles */
+        .section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.6em;
+            margin: 25px 0 15px;
+        }
+
+        /* Course Cards */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .course-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+
+        .course-card h3 {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .course-price {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .course-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .course-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .course-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        /* Payment Section */
+        .payment-options {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .payment-options h3 {
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .payment-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .payment-btn {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .payment-btn.venmo {
+            background: linear-gradient(135deg, #3D95CE 0%, #008CFF 100%);
+            color: white;
+        }
+
+        .payment-btn.cashapp {
+            background: linear-gradient(135deg, #00C244 0%, #00D54B 100%);
+            color: white;
+        }
+
+        .payment-btn.paypal {
+            background: linear-gradient(135deg, #003087 0%, #009CDE 100%);
+            color: white;
+        }
+
+        .payment-icon {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .important-box {
+            background: #ffebee;
+            border-left: 5px solid #f44336;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-item strong {
+            color: #3498db;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 20px 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header p {
+                font-size: 1.1em;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Payment Instructions */
+        .payment-instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .payment-instructions h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .payment-instructions ol {
+            margin-left: 20px;
+        }
+
+        .payment-instructions li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        /* Payment Info Display */
+        .payment-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .payment-details strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .payment-details code {
+            background: #e9ecef;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 1.3em;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1>🎯 Arkansas CHCL Course</h1>
+            <p style="font-size: 1.5em; margin: 15px 0;">Wes Milam, AR CHCL Instructor #24-1604</p>
+            <p>Professional Concealed Handgun Carry License Training</p>
+            <p>State-Approved | Expert Instruction | Fort Smith, Arkansas</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-content">
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#payment">Payment</a>
+            <a href="#materials">Student Materials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Course Options Section -->
+        <div class="section" id="courses">
+            <h2>🎓 Course Options</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">Choose the training that fits your needs. All courses are state-approved and taught by certified instructor Wes Milam in Fort Smith, Arkansas.</p>
+            
+            <div class="course-grid">
+                <!-- Basic CHCL Course -->
+                <div class="course-card">
+                    <h3>Basic CHCL Course</h3>
+                    <div class="course-price">$100</div>
+                    <ul class="course-features">
+                        <li>5-Hour Classroom Instruction</li>
+                        <li>Arkansas Firearm Laws</li>
+                        <li>Safe Handling & Storage</li>
+                        <li>Use of Force Guidelines</li>
+                        <li>Live Fire Qualification</li>
+                        <li>State Certification</li>
+                    </ul>
+                    <a href="#payment" class="cta-button">Enroll Now</a>
+                </div>
+
+                <!-- Enhanced CHCL Course -->
+                <div class="course-card">
+                    <h3>Basic & Enhanced Course</h3>
+                    <div class="course-price">$135</div>
+                    <ul class="course-features">
+                        <li>Everything in Basic Course</li>
+                        <li>Additional 3 Hours Training</li>
+                        <li>Advanced Tactics</li>
+                        <li>Enhanced Qualification</li>
+                        <li>Carry in More Locations</li>
+                        <li>Complete Certification</li>
+                    </ul>
+                    <a href="#payment" class="cta-button">Enroll Now</a>
+                </div>
+
+                <!-- License Renewal -->
+                <div class="course-card">
+                    <h3>License Renewal</h3>
+                    <div class="course-price">$35</div>
+                    <ul class="course-features">
+                        <li>Quick Renewal Process</li>
+                        <li>Update on Law Changes</li>
+                        <li>Refresher Training</li>
+                        <li>Re-Qualification</li>
+                        <li>Keep Your License Current</li>
+                        <li>Same Day Processing</li>
+                    </ul>
+                    <a href="#payment" class="cta-button">Renew Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <h2>📋 About Our Training</h2>
+            <p style="font-size: 1.15em; margin-bottom: 20px;">We provide comprehensive, state-approved concealed handgun carry license training in Arkansas. Our courses meet all requirements set forth by Arkansas law and are taught by experienced, certified instructors.</p>
+            
+            <h3>What You'll Learn</h3>
+            <div class="info-box">
+                <strong>Basic CHCL Course (5 Hours):</strong>
+                <ul>
+                    <li>Arkansas concealed carry laws and regulations</li>
+                    <li>Safe firearm handling, storage, and transportation</li>
+                    <li>Use of force and self-defense principles</li>
+                    <li>Conflict avoidance and de-escalation</li>
+                    <li>Prohibited locations and restrictions</li>
+                    <li>Live fire qualification on the range</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <strong>Enhanced CHCL Course (8 Hours Total):</strong>
+                <ul>
+                    <li>All Basic Course content PLUS:</li>
+                    <li>Additional 3 hours of advanced training</li>
+                    <li>Enhanced firearm handling techniques</li>
+                    <li>Advanced situational awareness</li>
+                    <li>More comprehensive qualification</li>
+                    <li>Ability to carry in additional locations (like public universities)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Requirements Section -->
+        <div class="section" id="requirements">
+            <h2>✅ Requirements</h2>
+            
+            <h3>To Take the Course, You Must:</h3>
+            <ul>
+                <li>Be at least 21 years old (or 18 with military service)</li>
+                <li>Be a U.S. citizen or legal resident</li>
+                <li>Not be prohibited from possessing a firearm under state or federal law</li>
+                <li>Not be a fugitive from justice</li>
+                <li>Not have been adjudicated mentally incompetent</li>
+                <li>Not have been committed to a mental institution</li>
+                <li>Not be a habitual drunkard or unlawful user of controlled substances</li>
+            </ul>
+
+            <h3>What to Bring:</h3>
+            <div class="warning-box">
+                <strong>Required Items:</strong>
+                <ul>
+                    <li>Valid government-issued photo ID</li>
+                    <li>Handgun (9mm or larger caliber recommended)</li>
+                    <li>50 rounds of ammunition for your firearm</li>
+                    <li>Eye and ear protection</li>
+                    <li>Note-taking materials</li>
+                    <li>Payment for the course</li>
+                </ul>
+            </div>
+
+            <div class="important-box">
+                <strong>Important Note:</strong> If you don't have your own firearm, please contact us in advance. We may be able to provide a rental firearm for the live fire portion.
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="section" id="payment">
+            <h2>💳 Payment Options</h2>
+            <p style="font-size: 1.15em; margin-bottom: 20px;">We accept multiple convenient payment methods. Choose the option that works best for you:</p>
+
+            <div class="payment-options">
+                <h3>Pay Securely Online</h3>
+                <p style="text-align: center; margin-bottom: 20px;">Select your payment method and complete your enrollment</p>
+                
+                <div class="payment-buttons">
+                    <a href="#venmo-details" class="payment-btn venmo" onclick="showPaymentDetails('venmo')">
+                        <div class="payment-icon">📱</div>
+                        <div>Pay with Venmo</div>
+                    </a>
+                    <a href="#cashapp-details" class="payment-btn cashapp" onclick="showPaymentDetails('cashapp')">
+                        <div class="payment-icon">💵</div>
+                        <div>Pay with Cash App</div>
+                    </a>
+                    <a href="#paypal-details" class="payment-btn paypal" onclick="showPaymentDetails('paypal')">
+                        <div class="payment-icon">🅿️</div>
+                        <div>Pay with PayPal</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="payment-instructions">
+                <h4>How to Complete Your Payment:</h4>
+                <ol>
+                    <li><strong>Select your preferred payment method</strong> from the buttons above</li>
+                    <li><strong>Note the payment amount</strong> for your chosen course:
+                        <ul>
+                            <li>Basic CHCL Course: $100</li>
+                            <li>Basic & Enhanced CHCL Course: $135</li>
+                            <li>License Renewal: $35</li>
+                        </ul>
+                    </li>
+                    <li><strong>Open your payment app</strong> (Venmo, Cash App, or PayPal) on your phone</li>
+                    <li><strong>Send payment</strong> to the username/email provided below</li>
+                    <li><strong>Include your name and course type</strong> in the payment note/memo</li>
+                    <li><strong>Contact us</strong> to confirm your enrollment and schedule your class</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Important:</strong> After sending payment, please contact us immediately to confirm your enrollment and receive your class schedule. Include your name, phone number, and the course you're enrolling in.
+                </div>
+            </div>
+
+            <!-- Payment Details Sections (Hidden by default, shown via JavaScript) -->
+            <div id="venmo-details" class="payment-details" style="display: none;">
+                <strong>Venmo Payment Information:</strong>
+                <code>@YourVenmoUsername</code>
+                <p style="margin-top: 15px; color: #666;">Include your full name and course type in the payment note</p>
+            </div>
+
+            <div id="cashapp-details" class="payment-details" style="display: none;">
+                <strong>Cash App Payment Information:</strong>
+                <code>$YourCashAppTag</code>
+                <p style="margin-top: 15px; color: #666;">Include your full name and course type in the payment note</p>
+            </div>
+
+            <div id="paypal-details" class="payment-details" style="display: none;">
+                <strong>PayPal Payment Information:</strong>
+                <code>your-email@example.com</code>
+                <p style="margin-top: 15px; color: #666;">Select "Friends & Family" and include your full name and course type in the note</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section" id="contact">
+            <h2>📞 Contact Us</h2>
+            
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <strong>📍 Location:</strong> Fort Smith, Arkansas
+                </div>
+                <div class="contact-item">
+                    <strong>👨‍🏫 Instructor:</strong> Wes Milam, AR CHCL Instructor #24-1604
+                </div>
+                <div class="contact-item">
+                    <strong>📧 Email:</strong> your-email@example.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱 Phone:</strong> (479) XXX-XXXX
+                </div>
+                <div class="contact-item">
+                    <strong>🕐 Office Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 30px;">
+                <h4>Questions?</h4>
+                <p>We're here to help! Whether you have questions about course requirements, scheduling, or the application process, feel free to reach out. We typically respond within 24 hours.</p>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <h2>ℹ️ Additional Information</h2>
+            
+            <h3>After Course Completion</h3>
+            <p>Upon successful completion of the course, you will receive a certificate that must be submitted with your Arkansas CHCL application to the Arkansas State Police. We'll provide detailed instructions on the application process.</p>
+
+            <h3>Class Schedule</h3>
+            <p>Classes are typically held on weekends and select weekdays. Contact us for the next available class date and to reserve your spot. Class sizes are limited to ensure quality instruction.</p>
+
+            <h3>Cancellation Policy</h3>
+            <p>If you need to cancel or reschedule, please notify us at least 48 hours in advance. Your payment can be transferred to a future class date.</p>
+
+            <div class="warning-box">
+                <strong>Note:</strong> This course satisfies the training requirements for an Arkansas Concealed Handgun Carry License as mandated by Arkansas Code Annotated § 5-73-309. The final license is issued by the Arkansas State Police, not by our training facility.
+            </div>
+        </div>
+
+        <!-- Student Materials Section -->
+        <div class="section" id="materials">
+            <h2>🎓 Student Course Materials</h2>
+            <p style="font-size: 1.15em; margin-bottom: 30px;">Enrolled students can access their course presentations using the password provided at enrollment.</p>
+
+            <div class="course-grid">
+                <!-- Basic Course Materials -->
+                <div class="course-card" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">
+                    <h3>Basic CHCL</h3>
+                    <p style="margin: 15px 0;">Course Presentation</p>
+                    <div style="margin: 20px 0;">
+                        <p>🔒 Password Protected</p>
+                        <p style="font-size: 0.9em; opacity: 0.9; margin-top: 10px;">5-Hour Course Materials</p>
+                    </div>
+                    <a href="basic-course-access.html" class="cta-button" style="background: white; color: #2980b9;">Access Materials →</a>
+                </div>
+
+                <!-- Enhanced Course Materials -->
+                <div class="course-card">
+                    <h3>Enhanced CHCL</h3>
+                    <p style="margin: 15px 0;">Course Presentation</p>
+                    <div style="margin: 20px 0;">
+                        <p>🔒 Password Protected</p>
+                        <p style="font-size: 0.9em; opacity: 0.9; margin-top: 10px;">8-Hour Course Materials</p>
+                    </div>
+                    <a href="enhanced-course-access.html" class="cta-button">Access Materials →</a>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 30px;">
+                <h4>📝 For Enrolled Students</h4>
+                <p>If you have enrolled in a course and need the access password, please refer to your enrollment confirmation email or contact us directly. Passwords are provided to enrolled students only.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><strong>Arkansas CHCL Course</strong></p>
+        <p>Wes Milam, AR CHCL Instructor #24-1604</p>
+        <p>State-Approved Concealed Handgun Carry License Training</p>
+        <p>Fort Smith, Arkansas</p>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">© 2026 Arkansas CHCL Course. All rights reserved.</p>
+        <p style="font-size: 0.85em; opacity: 0.7;">This training satisfies Arkansas state requirements for CHCL certification</p>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.includes('-details')) return; // Don't smooth scroll for payment details
+                
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Show payment details
+        function showPaymentDetails(type) {
+            // Hide all payment details
+            document.querySelectorAll('.payment-details').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Show selected payment details
+            const detailsEl = document.getElementById(type + '-details');
+            if (detailsEl) {
+                detailsEl.style.display = 'block';
+                // Scroll to the details
+                setTimeout(() => {
+                    detailsEl.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }, 100);
+            }
+        }
+    </script>
+</body>
+</html>

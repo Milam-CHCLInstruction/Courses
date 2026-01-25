@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkansas Concealed Handgun Carry License (CHCL) - Basic Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            min-height: 500px;
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 20px 0 15px;
+            font-size: 1.5em;
+        }
+
+        h4 {
+            color: #555;
+            margin: 15px 0 10px;
+            font-size: 1.2em;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .danger-box {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .slide-counter {
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 0 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        strong {
+            color: #e74c3c;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        @media print {
+            .navigation {
+                display: none;
+            }
+            .slide {
+                display: block !important;
+                page-break-after: always;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .navigation {
+                width: 90%;
+                padding: 10px 15px;
+            }
+            button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <div class="header">
+                <h1>Arkansas Concealed Handgun Carry License</h1>
+                <p>Basic Training Course</p>
+                <p style="font-size: 0.9em; margin-top: 10px;">Dr. Wes Milam, AR CHCL Instructor # 24-1604</p>
+            </div>
+            <div class="info-box">
+                <h3>Course Overview</h3>
+                <p>This presentation covers the minimum requirements for obtaining an Arkansas Concealed Handgun Carry License (CHCL). Minimum instruction time is 5 hours excluding range live fire, fingerprinting, and application completion.</p>
+            </div>
+            <div class="warning-box">
+                <strong>Important Note:</strong> Arkansas Code Â§ 5-73-329 states that this subchapter does NOT require a person to obtain a license to carry a concealed handgun in Arkansas. The license provides reciprocity in other states.
+            </div>
+            <div class="success-box">
+                <h3>Course Objectives</h3>
+                <ul>
+                    <li>Understand Arkansas and Federal firearms laws</li>
+                    <li>Learn proper handgun safety and handling</li>
+                    <li>Know when deadly force is legally justified</li>
+                    <li>Demonstrate proficiency with live fire</li>
+                    <li>Understand responsibilities of license holders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 2: Administrative Matters -->
+        <div class="slide">
+            <h2>Part I: Administrative Matters</h2>
+            
+            <h3>License Reciprocity</h3>
+            <div class="info-box">
+                <p>The Arkansas CHCL is recognized in many other states. However, you are responsible for:</p>
+                <ul>
+                    <li>Determining which states honor your Arkansas license</li>
+                    <li>Understanding each state's specific requirements and restrictions</li>
+                    <li>Complying with all laws of states you visit</li>
+                </ul>
+            </div>
+
+            <h3>Pass/Fail Criteria</h3>
+            <p>To successfully complete this course, you must:</p>
+            <ul>
+                <li>Attend all classroom instruction (minimum 5 hours)</li>
+                <li>Demonstrate safe handgun handling</li>
+                <li>Pass the live-fire qualification</li>
+                <li>Complete and submit a properly filled application</li>
+                <li>Provide classifiable fingerprints</li>
+            </ul>
+
+            <h3>Legal Requirements</h3>
+            <div class="warning-box">
+                <strong>You will be denied a license if you:</strong>
+                <ul>
+                    <li>Are prohibited under state or federal law from possessing a firearm</li>
+                    <li>Have been convicted of certain crimes</li>
+                    <li>Are subject to certain protective orders</li>
+                    <li>Have been adjudicated mentally incompetent</li>
+                    <li>Are addicted to alcohol or controlled substances</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3: Avoid Victimization -->
+        <div class="slide">
+            <h2>Part II: Avoid Victimization</h2>
+            
+            <div class="success-box">
+                <strong>Remember:</strong> The best self-defense is avoiding dangerous situations altogether.
+            </div>
+
+            <h3>Home Security</h3>
+            <ul>
+                <li>Install and use quality locks on all doors and windows</li>
+                <li>Use wide-angle viewers on solid doors</li>
+                <li>Install motion-detection exterior lighting</li>
+                <li>Keep shrubbery pruned to eliminate hiding places</li>
+                <li>Never hide keys outside your home</li>
+                <li>Never open your door to strangers</li>
+                <li>Never tell strangers you are home alone</li>
+            </ul>
+
+            <h3>Personal Safety in Public</h3>
+            <ul>
+                <li><strong>Make eye contact</strong> with people you meet - communicates awareness and confidence</li>
+                <li>Be aware of your surroundings at all times</li>
+                <li>Park in well-lit, populated areas</li>
+                <li>Have your keys ready before reaching your vehicle</li>
+                <li>Check your vehicle before entering</li>
+                <li>Trust your instincts - if something feels wrong, leave the area</li>
+            </ul>
+
+            <h3>Mental Readiness</h3>
+            <p>Constantly assess your environment by asking:</p>
+            <ul>
+                <li>Are there other people around?</li>
+                <li>Are there things out of place or unusual?</li>
+                <li>Does anyone appear nervous or suspicious?</li>
+                <li>Where would I go for cover if needed?</li>
+                <li>What would I do if confronted right now?</li>
+                <li>Where are the exits?</li>
+            </ul>
+
+            <h3>Vehicle Safety</h3>
+            <ul>
+                <li>Always lock vehicle doors while driving</li>
+                <li>Be especially alert at intersections and stop lights</li>
+                <li>Leave space between your vehicle and the one ahead</li>
+                <li>If confronted during a carjacking, consider giving up the vehicle rather than your life</li>
+                <li>Never allow yourself to be taken to a secondary location</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: Laws - Introduction and Resources -->
+        <div class="slide">
+            <h2>Part III: Laws Regarding Use of Handgun</h2>
+            
+            <div class="danger-box">
+                <strong>Critical:</strong> You are solely responsible for knowing and complying with all applicable laws. Laws change - it is your responsibility to stay current.
+            </div>
+
+            <h3>Legal Resources</h3>
+            <div class="info-box">
+                <p><strong>Arkansas Code:</strong><br>
+                <a href="http://www.lexisnexis.com/hottopics/arcode/Default.asp" target="_blank" style="color: #2c3e50;">http://www.lexisnexis.com/hottopics/arcode/Default.asp</a></p>
+                
+                <p><strong>Arkansas Courts (Case Law & Opinions):</strong><br>
+                <a href="https://www.arcourts.gov/" target="_blank" style="color: #2c3e50;">https://www.arcourts.gov/</a></p>
+                
+                <p><strong>Arkansas State Police CHCL Information:</strong><br>
+                <a href="https://www.dps.arkansas.gov/law-enforcement/arkansas-state-police/services-programs/concealed-handgun-carry-licensing/" target="_blank" style="color: #2c3e50;">https://www.dps.arkansas.gov/law-enforcement/arkansas-state-police/services-programs/concealed-handgun-carry-licensing/</a></p>
+                
+                <p><strong>Arkansas Rules of Criminal Procedure:</strong><br>
+                <a href="https://rules.arcourts.gov/w/ark/rules-of-criminal-procedure" target="_blank" style="color: #2c3e50;">https://rules.arcourts.gov/w/ark/rules-of-criminal-procedure</a></p>
+            </div>
+
+            <h3>Understanding Arkansas Law</h3>
+            <p>Arkansas law consists of:</p>
+            <ul>
+                <li><strong>Statutory Law:</strong> Arkansas Code Annotated (A.C.A.) - laws passed by the legislature</li>
+                <li><strong>Case Law:</strong> Court decisions interpreting statutes</li>
+                <li><strong>Rules:</strong> Administrative rules (like CHCL Rules) promulgated by agencies</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Important Notes:</strong>
+                <ul>
+                    <li>The interpretation of these laws changes when new case law is issued or legislature amends statutes</li>
+                    <li>Laws presented here are current as of July 31, 2023 - verify current versions</li>
+                    <li>In addition to criminal charges, you may face civil liability in civil court regardless of criminal outcome</li>
+                </ul>
+            </div>
+
+            <h3>We Will Cover:</h3>
+            <ol>
+                <li>Principles of Criminal Liability - Culpability</li>
+                <li>Principles of Criminal Liability - Justification as Defense</li>
+                <li>Assault and Battery Crimes</li>
+                <li>Weapons Possession and Use Laws</li>
+                <li>Arkansas Concealed Handgun Carry Licensing Law</li>
+                <li>Arkansas CHCL Rules</li>
+                <li>Arkansas Rules of Criminal Procedure</li>
+            </ol>
+        </div>
+
+        <!-- Slide 5: Culpable Mental States -->
+        <div class="slide">
+            <h2>Principles of Criminal Liability - Culpability</h2>
+            
+            <h3>A.C.A. Â§ 5-2-201 - Definitions</h3>
+            <ul>
+                <li><strong>"Act":</strong> A bodily movement</li>
+                <li><strong>"Conduct":</strong> An act or omission and its accompanying culpable mental state</li>
+                <li><strong>"Omission":</strong> A failure to perform an act as to which a duty of performance is imposed by law</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-2-202 - Culpable Mental States</h3>
+            <p>Criminal offenses require both a criminal act AND a culpable mental state (mens rea). Understanding these is critical:</p>
+
+            <div class="info-box">
+                <h4>1. PURPOSELY</h4>
+                <p>A person acts purposely with respect to his or her conduct or a result when:</p>
+                <ul>
+                    <li>It is the person's <strong>conscious object</strong> to engage in conduct of that nature or to cause that result</li>
+                    <li><strong>Example:</strong> You aim your gun at someone and pull the trigger intending to shoot them</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>2. KNOWINGLY</h4>
+                <p>A person acts knowingly with respect to his or her conduct when:</p>
+                <ul>
+                    <li>The person is <strong>aware</strong> that his or her conduct is of that nature</li>
+                    <li>The person is aware that it is <strong>practically certain</strong> that conduct will cause a result</li>
+                    <li><strong>Example:</strong> You know your gun is loaded and you know that pulling the trigger will fire it</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>3. RECKLESSLY</h4>
+                <p>A person acts recklessly when he or she:</p>
+                <ul>
+                    <li><strong>Consciously disregards</strong> a substantial and unjustifiable risk</li>
+                    <li>The risk must be of such nature and degree that disregard constitutes a <strong>gross deviation</strong> from the standard of care a reasonable person would observe</li>
+                    <li><strong>Example:</strong> You know the gun might be loaded but you pull the trigger anyway without checking</li>
+                </ul>
+            </div>
+
+            <div class="danger-box">
+                <h4>4. NEGLIGENTLY</h4>
+                <p>A person acts negligently when he or she:</p>
+                <ul>
+                    <li><strong>Should be aware</strong> of a substantial and unjustifiable risk</li>
+                    <li>Failure to perceive the risk involves a <strong>gross deviation</strong> from standard of care a reasonable person would observe</li>
+                    <li><strong>Example:</strong> You didn't check if the gun was loaded before handling it, and a reasonable person would have checked</li>
+                </ul>
+            </div>
+
+            <h3>Why This Matters for Self-Defense</h3>
+            <p>Your mental state when using force affects both:</p>
+            <ul>
+                <li><strong>Whether you're criminally liable:</strong> Different crimes require different mental states</li>
+                <li><strong>Whether justification applies:</strong> Self-defense requires you <em>reasonably believed</em> force was necessary</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Justification - Definitions and General Principles -->
+        <div class="slide">
+            <h2>Justification as a Defense - A.C.A. Â§Â§ 5-2-601 to -622</h2>
+            
+            <div class="success-box">
+                <p><strong>Justification</strong> is a complete defense to criminal charges. If your use of force is justified under Arkansas law, you cannot be convicted of a crime based on that use of force.</p>
+            </div>
+
+            <h3>A.C.A. Â§ 5-2-601 - Key Definitions</h3>
+            <ul>
+                <li><strong>"Deadly Physical Force":</strong> Physical force that under the circumstances in which it is used is <strong>readily capable of causing death or serious physical injury</strong>
+                    <ul>
+                        <li>Using a firearm ALWAYS constitutes deadly physical force</li>
+                    </ul>
+                </li>
+                <li><strong>"Dwelling":</strong> An enclosed space that is used or intended to be used as a human habitation, home, or residence on a temporary or permanent basis</li>
+                <li><strong>"Minor":</strong> Any person less than eighteen (18) years of age</li>
+                <li><strong>"Unlawful Physical Force":</strong> Physical force that is employed <strong>without the consent</strong> of the person against whom it is directed and the employment of the physical force constitutes a criminal offense or tort</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-2-604 - Choice of Evils</h3>
+            <p>Conduct is justified when:</p>
+            <ul>
+                <li>The person reasonably believes the conduct is necessary to avoid imminent harm</li>
+                <li>The desirability and urgency of avoiding the harm clearly outweigh the harm sought to be prevented by the law</li>
+                <li><strong>Example:</strong> Breaking into cabin in wilderness to avoid freezing to death</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-2-605 - Use of Physical Force Generally</h3>
+            <p>The justification afforded by Â§Â§ 5-2-606 through 5-2-609 is unavailable when:</p>
+            <ul>
+                <li>The person uses physical force <strong>with purpose to cause death or serious physical injury</strong></li>
+                <li>The person provokes the use of physical force by another person <strong>with purpose to cause injury or death</strong></li>
+                <li>The person knows he or she can avoid the necessity of using physical force with <strong>complete safety by retreating</strong> (except as provided in Â§ 5-2-607)</li>
+            </ul>
+
+            <div class="info-box">
+                <h4>General Principles of Justification</h4>
+                <ul>
+                    <li>Justification is based on <strong>reasonable belief</strong> at the time - not what you learn later</li>
+                    <li>You can only use the <strong>amount of force reasonably necessary</strong></li>
+                    <li>If you can safely retreat, you generally should (with important exceptions for deadly force)</li>
+                    <li>You cannot claim justification if you started or provoked the conflict</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 7: Use of Physical Force in Defense of Person -->
+        <div class="slide">
+            <h2>A.C.A. Â§ 5-2-606 - Use of Physical Force in Defense of Person</h2>
+            
+            <h3>When Physical Force is Justified</h3>
+            <p>A person is justified in using physical force upon another person to defend:</p>
+            <ul>
+                <li>Himself or herself, OR</li>
+                <li>A third person</li>
+            </ul>
+            
+            <p><strong>From what the person reasonably believes to be:</strong></p>
+            <ul>
+                <li>The use or <strong>imminent use</strong> of unlawful physical force by that other person</li>
+            </ul>
+
+            <p><strong>The person may use a degree of force that he or she reasonably believes to be necessary</strong></p>
+
+            <div class="danger-box">
+                <h4>CRITICAL LIMITATION</h4>
+                <p><strong>A person may NOT use deadly physical force</strong> except as provided in A.C.A. Â§ 5-2-607</p>
+                <p>Since using a firearm constitutes deadly physical force, you MUST meet the requirements of Â§ 5-2-607</p>
+            </div>
+
+            <h3>When Physical Force is NOT Justified (Â§ 5-2-606(b))</h3>
+            <p>You are NOT justified in using physical force if:</p>
+
+            <div class="warning-box">
+                <h4>1. You Provoked the Confrontation</h4>
+                <ul>
+                    <li>With purpose to cause physical injury or death to the other person</li>
+                    <li>You provoke the use of unlawful physical force by the other person</li>
+                </ul>
+                <p><strong>Exception:</strong> If you in good faith withdraw and effectively communicate your withdrawal, and the other person continues or threatens to continue using force</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>2. You Are the Initial Aggressor</h4>
+                <ul>
+                    <li>You are the initial aggressor in the encounter</li>
+                </ul>
+                <p><strong>Exception:</strong> Same as above - you can regain justification by withdrawing in good faith and communicating that withdrawal</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>3. Combat by Agreement</h4>
+                <ul>
+                    <li>The physical force involved is the product of combat by agreement not authorized by law</li>
+                    <li><strong>Example:</strong> Mutual combat, "consensual" fights</li>
+                </ul>
+            </div>
+
+            <h3>Key Concepts</h3>
+            <ul>
+                <li><strong>"Reasonably believes":</strong> Your belief must be objectively reasonable - what would a reasonable person believe?</li>
+                <li><strong>"Imminent":</strong> About to happen immediately, not sometime in the future</li>
+                <li><strong>"Unlawful physical force":</strong> Force used without consent that constitutes a crime or tort</li>
+                <li><strong>"Necessary":</strong> Required in the situation; force must be proportional to threat</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Use of Deadly Physical Force in Defense of Person -->
+        <div class="slide">
+            <h2>A.C.A. Â§ 5-2-607 - Use of Deadly Physical Force</h2>
+            
+            <div class="danger-box">
+                <h3>THIS IS THE MOST IMPORTANT STATUTE FOR ARMED CITIZENS</h3>
+                <p>This statute defines when you may use DEADLY PHYSICAL FORCE (including firearms)</p>
+            </div>
+
+            <h3>When Deadly Force is Justified (Â§ 5-2-607(a))</h3>
+            <p>A person is justified in using deadly physical force upon another person if the person <strong>reasonably believes</strong> that the other person is:</p>
+
+            <div class="info-box">
+                <h4>1. Committing or About to Commit a Felony Involving Physical Force or Violence</h4>
+                <ul>
+                    <li>Examples: Armed robbery, aggravated assault, kidnapping, rape</li>
+                    <li>Must involve force or violence - not all felonies qualify</li>
+                    <li>Must be happening now or about to happen (imminent)</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>2. Using or About to Use Unlawful Deadly Physical Force</h4>
+                <ul>
+                    <li>Attacker has weapon and is threatening to use it</li>
+                    <li>Attacker is using force that could cause death/serious injury</li>
+                    <li>Must be unlawful - can't shoot police making lawful arrest</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>3. Imminently Endangering the Person's Life</h4>
+                <ul>
+                    <li>Creating immediate danger of death</li>
+                    <li>Example: Attacker choking you, beating your head against concrete</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>4. About to Victimize from Pattern of Domestic Abuse</h4>
+                <ul>
+                    <li>Continuation of pattern of domestic abuse</li>
+                    <li>Requires established pattern, not isolated incident</li>
+                </ul>
+            </div>
+
+            <h3>Stand Your Ground - No Duty to Retreat (Â§ 5-2-607(b))</h3>
+            <p>A person is NOT required to retreat if the person is:</p>
+            <ol>
+                <li><strong>Lawfully present</strong> at the location where deadly physical force is used</li>
+                <li>Has a <strong>reasonable belief</strong> that the person against whom deadly force is used is imminently threatening to cause death or serious physical injury</li>
+                <li><strong>Not the initial aggressor</strong> and has not provoked the person against whom deadly physical force is used</li>
+            </ol>
+
+            <h3>Additional No Duty to Retreat Situations (Â§ 5-2-607(b))</h3>
+            <ul>
+                <li>The person is in his or her <strong>dwelling or on curtilage</strong> surrounding the dwelling and was not the original aggressor</li>
+                <li>The person is a <strong>law enforcement officer</strong> or assisting law enforcement</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Critical Points:</strong>
+                <ul>
+                    <li>Your belief must be <strong>REASONABLE</strong> - judged objectively</li>
+                    <li>Threat must be <strong>IMMINENT</strong> - happening now or about to happen</li>
+                    <li>You cannot be the <strong>INITIAL AGGRESSOR</strong> or have provoked the situation</li>
+                    <li>Even if justified, you may still face arrest, charges, and civil lawsuits</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 9: Defense of Premises and Property -->
+        <div class="slide">
+            <h2>Defense of Premises and Property</h2>
+            
+            <h3>A.C.A. Â§ 5-2-608 - Use of Physical Force in Defense of Premises</h3>
+            
+            <h4>Non-Deadly Force (Â§ 5-2-608(a))</h4>
+            <p>A person in lawful possession or control of premises or a vehicle is justified in using <strong>non-deadly physical force</strong> upon another person when and to the extent that the person reasonably believes the use of non-deadly physical force is necessary to:</p>
+            <ul>
+                <li><strong>Prevent or terminate</strong> the commission or attempted commission of <strong>criminal trespass</strong> by the other person in or upon the premises or vehicle</li>
+            </ul>
+
+            <h4>Deadly Force (Â§ 5-2-608(b))</h4>
+            <p>A person may use <strong>deadly physical force</strong> under this section if:</p>
+            <ol>
+                <li>Use of deadly physical force is authorized by <strong>A.C.A. Â§ 5-2-607</strong> (self-defense), OR</li>
+                <li>The person reasonably believes the use of deadly physical force is necessary to prevent the commission of:
+                    <ul>
+                        <li><strong>Arson</strong>, or</li>
+                        <li><strong>Burglary</strong> by a trespasser</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>Important Distinctions:</strong>
+                <ul>
+                    <li><strong>Criminal Trespass:</strong> Unlawfully entering or remaining on property - does NOT alone justify deadly force</li>
+                    <li><strong>Burglary:</strong> Entering or remaining in building with intent to commit a felony or theft - MAY justify deadly force</li>
+                    <li><strong>Arson:</strong> Starting a fire to damage property - MAY justify deadly force</li>
+                </ul>
+            </div>
+
+            <h3>A.C.A. Â§ 5-2-609 - Use of Physical Force in Defense of Property</h3>
+            
+            <h4>Non-Deadly Force Only</h4>
+            <p>A person is justified in using <strong>non-deadly physical force</strong> upon another person when and to the extent that the person reasonably believes the use of non-deadly physical force is necessary to prevent or terminate the other person's:</p>
+            <ul>
+                <li>Commission or attempted commission of <strong>theft or criminal mischief</strong>, OR</li>
+                <li><strong>Subsequent flight</strong> from the commission or attempted commission of theft or criminal mischief</li>
+            </ul>
+
+            <div class="danger-box">
+                <h3>CRITICAL: You CANNOT Use Deadly Force to Protect Property Alone</h3>
+                <ul>
+                    <li>Cannot shoot someone for stealing your car</li>
+                    <li>Cannot shoot someone for vandalizing property</li>
+                    <li>Cannot shoot fleeing thief</li>
+                    <li>Property is NOT worth a human life</li>
+                    <li><strong>Exception:</strong> If person committing theft also poses threat justifying deadly force under Â§ 5-2-607</li>
+                </ul>
+            </div>
+
+            <h3>Practical Application</h3>
+            <table>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Deadly Force Justified?</th>
+                </tr>
+                <tr>
+                    <td>Someone stealing from your yard</td>
+                    <td><strong>NO</strong> - property theft only</td>
+                </tr>
+                <tr>
+                    <td>Someone breaking into your garage at night</td>
+                    <td><strong>MAYBE</strong> - burglary may justify if reasonably believed necessary</td>
+                </tr>
+                <tr>
+                    <td>Someone breaking into your home at night</td>
+                    <td><strong>LIKELY YES</strong> - burglary + reasonable fear for safety</td>
+                </tr>
+                <tr>
+                    <td>Someone in your home threatening you with weapon</td>
+                    <td><strong>YES</strong> - meets Â§ 5-2-607 requirements</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Slide 10: Additional Justification Statutes -->
+        <div class="slide">
+            <h2>Additional Justification Statutes</h2>
+            
+            <h3>A.C.A. Â§ 5-2-611 - Use of Physical Force by Private Person Aiding Law Enforcement</h3>
+            <p>A person who has been directed by a law enforcement officer to assist is justified in using:</p>
+            <ul>
+                <li><strong>Reasonable and necessary physical force</strong> to effect an arrest, prevent escape, or prevent commission of crime</li>
+                <li>Unless the person knows the law enforcement officer is not authorized to request assistance</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-2-612 - Use of Physical Force in Resisting Arrest</h3>
+            <div class="danger-box">
+                <p>A person is <strong>NOT JUSTIFIED</strong> in using physical force to resist an arrest by law enforcement officer who is:</p>
+                <ul>
+                    <li>Known or reasonably appears to be authorized to make the arrest, AND</li>
+                    <li>The person knows or reasonably should know he or she is being arrested</li>
+                </ul>
+                <p><strong>Even if the arrest is unlawful!</strong> Fight it in court, not on the street.</p>
+            </div>
+
+            <h3>A.C.A. Â§ 5-2-614 - Use of Reckless or Negligent Force</h3>
+            <p>When a person believes that use of physical force is necessary for any purpose justifying that use under this subchapter:</p>
+            
+            <div class="warning-box">
+                <h4>Reckless or Negligent in Forming Belief</h4>
+                <p>If the person is <strong>reckless or negligent</strong> in forming that belief OR in employing an <strong>excessive degree of physical force</strong>:</p>
+                <ul>
+                    <li>The justification is <strong>UNAVAILABLE</strong> in prosecution for offense for which recklessness or negligence suffices to establish culpable mental state</li>
+                    <li><strong>Example:</strong> You think you see a gun but were reckless in that belief - you may be charged with negligent homicide even though you thought force was justified</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>Injury to Third Party</h4>
+                <p>When a person is justified in using physical force but recklessly or negligently <strong>injures or creates substantial risk of injury to a third party</strong>:</p>
+                <ul>
+                    <li>The justification is <strong>UNAVAILABLE</strong> in prosecution for recklessness or negligence toward the third party</li>
+                    <li><strong>Example:</strong> You're justified in shooting attacker, but you miss and hit innocent bystander - you may be charged for injury to bystander</li>
+                </ul>
+            </div>
+
+            <h3>A.C.A. Â§ 5-2-620 - Use of Force to Defend Persons and Property Within Home</h3>
+            <p>This is Arkansas's "Castle Doctrine" law providing enhanced protection for use of force in the home.</p>
+
+            <h3>A.C.A. Â§ 5-2-621 - Attempting to Protect Persons During Commission of Felony</h3>
+            <p>No person is <strong>civilly liable</strong> for action or omission intended to protect himself or another from personal injury during commission of a felony, UNLESS:</p>
+            <ul>
+                <li>The action or omission itself constitutes a <strong>felony</strong></li>
+            </ul>
+            <div class="info-box">
+                <p>This provides some civil immunity for reasonable defensive actions, but does not protect felonious conduct</p>
+            </div>
+        </div>
+
+        <!-- Slide 11: Assault and Battery Crimes Part 1 -->
+        <div class="slide">
+            <h2>Assault and Battery - A.C.A. Â§Â§ 5-13-201 to -310</h2>
+            
+            <div class="info-box">
+                <p><strong>Understanding Assault vs. Battery:</strong></p>
+                <ul>
+                    <li><strong>Battery:</strong> Unlawfully causing physical injury or seriously physically annoying contact</li>
+                    <li><strong>Assault:</strong> Purposely creating apprehension of imminent physical injury or engaging in conduct creating substantial risk</li>
+                </ul>
+            </div>
+
+            <h3>A.C.A. Â§ 5-13-201 - Battery in the First Degree</h3>
+            <div class="danger-box">
+                <strong>Class B Felony</strong> (5-20 years imprisonment)
+            </div>
+            <p>A person commits battery in the first degree if:</p>
+            <ol>
+                <li><strong>With purpose of causing serious physical injury</strong> to another person, the person causes serious physical injury to any person by means of a <strong>deadly weapon</strong>; OR</li>
+                <li>The person <strong>purposely</strong> causes serious physical injury to:
+                    <ul>
+                        <li>A person <strong>twelve (12) years of age or younger</strong></li>
+                        <li>A person the defendant knows or reasonably should know is <strong>pregnant</strong></li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>A.C.A. Â§ 5-13-202 - Battery in the Second Degree</h3>
+            <div class="warning-box">
+                <strong>Class D Felony</strong> (0-6 years imprisonment)
+            </div>
+            <p>A person commits battery in the second degree if the person:</p>
+            <ol>
+                <li><strong>Recklessly</strong> causes serious physical injury to another person by means of a <strong>deadly weapon</strong>;</li>
+                <li><strong>Purposely</strong> causes physical injury to another person by means of a <strong>deadly weapon</strong>;</li>
+                <li><strong>Purposely</strong> causes physical injury to:
+                    <ul>
+                        <li>Law enforcement officer, firefighter, code enforcement officer, etc.</li>
+                        <li>Teacher or other school employee</li>
+                        <li>Employee of a detention facility, jail, or correctional facility</li>
+                        <li>Healthcare worker</li>
+                        <li>Park ranger or wildlife officer</li>
+                        <li>Pregnant woman (known or should know)</li>
+                        <li>Child twelve (12) years of age or younger</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>A.C.A. Â§ 5-13-203 - Battery in the Third Degree</h3>
+            <div class="warning-box">
+                <strong>Class A Misdemeanor</strong> (up to 1 year jail, up to $2,500 fine)
+            </div>
+            <p>A person commits battery in the third degree if the person:</p>
+            <ul>
+                <li><strong>Recklessly</strong> causes physical injury to another person;</li>
+                <li><strong>Negligently</strong> causes physical injury to another person by means of a deadly weapon; OR</li>
+                <li><strong>Purposely</strong> causes stupor, unconsciousness, or physical or mental impairment or injury by administering a drug or substance without consent</li>
+            </ul>
+        </div>
+
+        <!-- Slide 12: Assault and Battery Crimes Part 2 -->
+        <div class="slide">
+            <h2>Assault Crimes</h2>
+            
+            <h3>A.C.A. Â§ 5-13-204 - Aggravated Assault</h3>
+            <div class="danger-box">
+                <strong>Class D Felony</strong> (0-6 years imprisonment)
+            </div>
+            <p>A person commits aggravated assault if, under circumstances manifesting <strong>extreme indifference to the value of human life</strong>, the person <strong>purposely</strong>:</p>
+            <ol>
+                <li>Engages in conduct that creates a <strong>substantial danger of death or serious physical injury</strong> to another person; OR</li>
+                <li><strong>Displays a firearm</strong> in such a manner that creates a substantial danger of death or serious physical injury</li>
+            </ol>
+            <div class="warning-box">
+                <strong>Important:</strong> Merely displaying a firearm can constitute aggravated assault if done recklessly or without justification!
+            </div>
+
+            <h3>A.C.A. Â§ 5-13-205 - Assault in the First Degree</h3>
+            <div class="danger-box">
+                <strong>Class B Felony</strong> (5-20 years imprisonment)
+            </div>
+            <p>A person commits assault in the first degree if the person <strong>recklessly</strong> engages in conduct that creates a <strong>substantial risk of death or serious physical injury</strong> to another person by means of a <strong>deadly weapon</strong>.</p>
+
+            <h3>A.C.A. Â§ 5-13-206 - Assault in the Second Degree</h3>
+            <div class="warning-box">
+                <strong>Class D Felony</strong> (0-6 years imprisonment)
+            </div>
+            <p>A person commits assault in the second degree if the person <strong>recklessly</strong> engages in conduct that creates a <strong>substantial risk of physical injury</strong> to another person by means of a <strong>deadly weapon</strong>.</p>
+
+            <h3>A.C.A. Â§ 5-13-207 - Assault in the Third Degree</h3>
+            <div class="warning-box">
+                <strong>Class A Misdemeanor</strong> (up to 1 year jail, up to $2,500 fine)
+            </div>
+            <p>A person commits assault in the third degree if the person:</p>
+            <ol>
+                <li><strong>Recklessly</strong> engages in conduct that creates substantial risk of physical injury to another person;</li>
+                <li><strong>Purposely</strong> creates apprehension of imminent physical injury to another person; OR</li>
+                <li>In the course of consummating or attempting to consummate a <strong>theft or unauthorized taking of property</strong>, the person uses or threatens to use force against another person with <strong>purpose of preventing or overcoming resistance</strong></li>
+            </ol>
+
+            <h3>A.C.A. Â§ 5-13-211 - Aggravated Assault Upon Law Enforcement Officer or Employee of Correctional Facility</h3>
+            <div class="danger-box">
+                <strong>Class Y Felony</strong> (10-40 years or life imprisonment)
+            </div>
+            <p>Same as aggravated assault, but victim is law enforcement officer or correctional facility employee acting in line of duty.</p>
+
+            <h3>A.C.A. Â§ 5-13-213 - Aggravated Assault Against First Responder</h3>
+            <div class="danger-box">
+                <strong>Class D Felony</strong> (0-6 years imprisonment)
+            </div>
+            <p>Assault against emergency medical services provider, firefighter, or other first responder.</p>
+        </div>
+
+        <!-- Slide 13: Criminal and Civil Liability -->
+        <div class="slide">
+            <h2>Criminal and Civil Liability Summary</h2>
+            
+            <h3>Potential Criminal Charges</h3>
+            <div class="danger-box">
+                <p>If you make an error in judgment about using deadly force, you may be charged with:</p>
+                <ul>
+                    <li><strong>Homicide offenses</strong> (A.C.A. Â§Â§ 5-10-101 to -106)
+                        <ul>
+                            <li>Murder in the First Degree (Capital Murder or Class Y Felony)</li>
+                            <li>Murder in the Second Degree (Class A Felony)</li>
+                            <li>Manslaughter (Class C Felony)</li>
+                            <li>Negligent Homicide (Class A or B Misdemeanor)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Assault and Battery</strong> (A.C.A. Â§Â§ 5-13-201 to -310) - as detailed in previous slides</li>
+                    <li><strong>Weapons offenses</strong> (A.C.A. Â§Â§ 5-73-101 to -133) - to be covered next</li>
+                </ul>
+            </div>
+
+            <h3>Civil Liability - A.C.A. Â§ 16-118-107</h3>
+            <p><strong>Civil Action by Crime Victim:</strong></p>
+            <div class="warning-box">
+                <p>Even if you are NOT convicted criminally (or charges are never filed), you may still face civil liability:</p>
+                <ul>
+                    <li>Victim or their estate can file civil lawsuit for damages</li>
+                    <li><strong>Lower burden of proof:</strong> Preponderance of evidence (more likely than not) vs. beyond reasonable doubt</li>
+                    <li>Plaintiff may recover <strong>actual damages</strong> (medical bills, lost wages, pain and suffering)</li>
+                    <li>Plaintiff may recover <strong>costs and attorney's fees</strong></li>
+                    <li>You could lose your home, savings, retirement, and other assets</li>
+                    <li>Homeowner's insurance typically does NOT cover intentional acts</li>
+                </ul>
+            </div>
+
+            <h3>Limited Civil Immunity - A.C.A. Â§ 16-120-303</h3>
+            <div class="info-box">
+                <p><strong>Attempting to Protect Persons During Commission of Felony:</strong></p>
+                <p>No person is civilly liable for action or omission intended to protect himself or herself or another from personal injury during commission of a felony, UNLESS:</p>
+                <ul>
+                    <li>The action or omission itself constitutes a <strong>felony</strong></li>
+                </ul>
+                <p>This provides <em>some</em> protection, but does not eliminate all civil liability risk.</p>
+            </div>
+
+            <h3>A.C.A. Â§ 5-73-322(j) - Campus Carry Immunity</h3>
+            <div class="info-box">
+                <p>Public universities, colleges, and community colleges are immune from claims for monetary damages arising from licensee's use of, or failure to use, a concealed handgun.</p>
+                <p><strong>BUT:</strong> The licensee is NOT immune and may be held personally liable.</p>
+            </div>
+
+            <div class="danger-box">
+                <h3>Bottom Line</h3>
+                <p>Using a firearm, even in what you believe is legitimate self-defense, can result in:</p>
+                <ul>
+                    <li>Criminal arrest and prosecution</li>
+                    <li>Years or life in prison if convicted</li>
+                    <li>Civil lawsuits for damages</li>
+                    <li>Financial ruin - legal fees, judgments, loss of assets</li>
+                    <li>Loss of gun rights</li>
+                    <li>Permanent criminal record</li>
+                </ul>
+                <p><strong>Use deadly force ONLY as an absolute last resort when you reasonably believe your life or the life of another is in imminent danger.</strong></p>
+            </div>
+        </div>
+
+        <!-- Slide 14: Weapons Laws - Definitions and Prohibited Possession -->
+        <div class="slide">
+            <h2>Arkansas Weapons Laws - A.C.A. Â§Â§ 5-73-101 to -133</h2>
+            
+            <h3>A.C.A. Â§ 5-73-101 - Definitions</h3>
+            <ul>
+                <li><strong>"Handgun":</strong> Any firearm, other than a fully automatic firearm, with a barrel length of less than twelve inches (12â€³) that is designed, made, or adapted to be fired with one (1) hand</li>
+                <li><strong>"Firearm":</strong> Any device designed, made, or adapted to expel a projectile by means of an explosion or burning substance</li>
+                <li><strong>"Journey":</strong> A person has left his or her home or curtilage either on foot, horseback, bicycle, or in an automobile for any purpose or duration</li>
+                <li><strong>"Vehicle":</strong> Any automobile and is considered an extension of a person's home</li>
+                <li><strong>"Loaded Firearm":</strong> A firearm that is assembled and contains an unexpended cartridge in the firing position</li>
+                <li><strong>"Collegiate Athletic Event":</strong> Sporting event sanctioned by institution of higher education</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-73-103 - Possession of Firearms by Certain Persons</h3>
+            <div class="danger-box">
+                <strong>Class D Felony</strong> - Punishable by up to 6 years imprisonment
+            </div>
+            
+            <p>A person commits offense if the person possesses a firearm and:</p>
+            <ol>
+                <li>The person has been convicted of a <strong>felony</strong> (with specific exception for antitrust violations, unfair trade practices, restraint of trade, or regulation of business practices)</li>
+                <li>The person has been adjudicated mentally ill</li>
+                <li>The person committed to a mental institution involuntarily</li>
+                <li>The person found not guilty by reason of mental disease or defect with respect to a felony or Class A misdemeanor</li>
+            </ol>
+
+            <div class="warning-box">
+                <p><strong>Enhanced Penalty:</strong> If the person has prior felony conviction for offense that had as an element the <strong>use or possession of a deadly weapon</strong>, enhanced penalties apply.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>Federal Law Prohibitions - 18 U.S.C. Â§ 922(g)</h4>
+                <p>Federal law also prohibits firearm possession by persons who:</p>
+                <ul>
+                    <li>Are convicted felons</li>
+                    <li>Are fugitives from justice</li>
+                    <li>Are unlawful users of or addicted to controlled substances</li>
+                    <li>Have been adjudicated mentally defective or committed to mental institution</li>
+                    <li>Are illegal aliens</li>
+                    <li>Have been dishonorably discharged from Armed Forces</li>
+                    <li>Have renounced U.S. citizenship</li>
+                    <li>Are subject to certain domestic violence protective orders</li>
+                    <li>Have been convicted of misdemeanor crime of domestic violence</li>
+                </ul>
+                <p><strong>Federal violations can result in up to 10 years in federal prison!</strong></p>
+            </div>
+        </div>
+
+        <!-- Slide 15: Handguns on School Property -->
+        <div class="slide">
+            <h2>A.C.A. Â§ 5-73-119 - Handguns on School Property</h2>
+            
+            <h3>Â§ 5-73-119(b) - Possession on School Property</h3>
+            <div class="danger-box">
+                <strong>Class D Felony</strong> - Up to 6 years imprisonment
+            </div>
+            
+            <p>It is unlawful to possess a handgun upon the developed property of a public or private school (K-12), in or upon any school bus, or at a designated school bus stop.</p>
+
+            <h3>Exceptions - Â§ 5-73-119(e)</h3>
+            <p>Possession IS lawful when:</p>
+            <ol>
+                <li>Person is in own dwelling/place of business or property with possessory interest (except on property of higher education institution)</li>
+                <li>Person is <strong>law enforcement officer, correctional officer, member of municipal fire department bomb squad authorized under Â§ 12-15-204, or armed forces member</strong> in course of duties</li>
+                <li>Person assisting law enforcement at their direction</li>
+                <li>Person is registered security guard in course of duties</li>
+                <li>Person is <strong>hunting legally</strong> with handgun</li>
+                <li>Person is <strong>certified law enforcement officer</strong>, on or off duty (may require ID if off-duty)</li>
+                <li>Person is <strong>on a journey</strong> (unless 18 or younger)</li>
+                <li>Person is participating in <strong>certified hunting safety or firearm safety course</strong></li>
+                <li>Person is participating in <strong>school-approved educational course or sporting activity</strong> involving firearms</li>
+                <li>Minor with proper supervision for lawful marksmanship</li>
+                <li>Person has <strong>CHCL and is in vehicle or locked unattended vehicle in parking lot</strong></li>
+                <li>Person has CHCL and carrying in <strong>private school operated by church/place of worship</strong> that allows it</li>
+                <li>Person has CHCL and carrying in <strong>private school or prekindergarten</strong> that has authorized it through governing board</li>
+            </ol>
+
+            <h3>Â§ 5-73-119(c) - Higher Education Property</h3>
+            <p>It is unlawful to possess handgun on property of public or private institution of higher education <strong>with purpose to employ as a weapon against a person</strong>.</p>
+            
+            <div class="info-box">
+                <p>Exceptions are similar to K-12, plus:</p>
+                <ul>
+                    <li>Licensed holders may carry in vehicle or locked vehicle in parking lot</li>
+                    <li><strong>Storage in dormitories/residence halls is PROHIBITED</strong> even for license holders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 16: Carrying a Weapon -->
+        <div class="slide">
+            <h2>A.C.A. Â§ 5-73-120 - Carrying a Weapon</h2>
+            
+            <div class="warning-box">
+                <strong>Class A Misdemeanor</strong> - Up to 1 year jail and/or up to $2,500 fine
+            </div>
+
+            <h3>The Offense</h3>
+            <p>A person commits the offense of carrying a weapon if the person possesses a handgun, knife, or club:</p>
+            <ul>
+                <li>On or about his or her person</li>
+                <li>In a vehicle occupied by the person</li>
+                <li>Otherwise readily available for use</li>
+                <li><strong>WITH A PURPOSE to employ the handgun, knife, or club as a weapon against a person</strong></li>
+            </ul>
+
+            <h3>Key Points</h3>
+            <div class="success-box">
+                <ul>
+                    <li><strong>Presumption of Lawful Purpose:</strong> A person is PRESUMED to be carrying a weapon with a lawful purpose</li>
+                    <li>Prosecution must prove <strong>purpose to employ as weapon against a person</strong></li>
+                    <li>Simply having a weapon is NOT the crime - it's the <strong>intent</strong> that matters</li>
+                </ul>
+            </div>
+
+            <h3>Exceptions - When Carrying IS Lawful (Â§ 5-73-120(c))</h3>
+            <ol>
+                <li>Person is in own dwelling, on own property, or in place of business</li>
+                <li>Person is <strong>law enforcement officer, member of armed forces, member of municipal fire department bomb squad (Â§ 12-15-204)</strong></li>
+                <li>Person is in personal vehicle or on property in which person has possessory or proprietary interest</li>
+                <li>Person is <strong>on a journey</strong> (has left home for any purpose or duration)</li>
+                <li>Person is a security guard in course of duties</li>
+                <li>Person is hunting or fishing in area where legal</li>
+                <li>Person is <strong>certified law enforcement officer (on or off duty)</strong></li>
+                <li>Person is <strong>licensed to carry concealed handgun under Â§Â§ 5-73-301 et seq.</strong></li>
+                <li>Person is participating in firearms-related activity or training</li>
+                <li>Person is traveling to or from such activity with unloaded weapon</li>
+                <li>Person has <strong>valid CHCL and carrying concealed handgun</strong></li>
+                <li>Person is <strong>current or former judge</strong> with valid CHCL</li>
+                <li>Person is <strong>Department of Corrections employee</strong> with proper authorization and in personal vehicle in DOC parking lot</li>
+            </ol>
+
+            <div class="info-box">
+                <h4>Practical Meaning</h4>
+                <p>If you have a valid Arkansas CHCL and are carrying your concealed handgun, you are NOT violating this statute. However, if you display or use the handgun unlawfully, you could be charged.</p>
+            </div>
+        </div>
+
+        <!-- Slide 17: Firearms in Publicly Owned Buildings -->
+        <div class="slide">
+            <h2>A.C.A. Â§ 5-73-122 - Carrying Firearms in Publicly Owned Buildings</h2>
+            
+            <div class="warning-box">
+                <strong>Class C Misdemeanor</strong> - Up to 30 days jail and/or up to $500 fine
+            </div>
+
+            <h3>Â§ 5-73-122(a)(1) - General Prohibition</h3>
+            <p>It is unlawful to carry a firearm in:</p>
+            <ul>
+                <li>Any <strong>publicly owned building or facility</strong></li>
+                <li>On <strong>State Capitol grounds</strong></li>
+            </ul>
+
+            <h3>Â§ 5-73-122(a)(2) - Enhanced Prohibition</h3>
+            <p>It is unlawful to carry a firearm in:</p>
+            <ul>
+                <li>The <strong>State Capitol Building</strong></li>
+                <li>The <strong>Arkansas Justice Building</strong> in Little Rock</li>
+            </ul>
+
+            <h3>Who Is Exempt?</h3>
+            <ul>
+                <li><strong>Law enforcement officers or security guards</strong> employed by state, agency, city, or county</li>
+                <li><strong>Members of municipal fire department bomb squads</strong> authorized under Â§ 12-15-204</li>
+                <li><strong>State or federal military personnel</strong></li>
+            </ul>
+
+            <h3>Â§ 5-73-122(a)(3) - Additional Exceptions</h3>
+            <p>Carrying a firearm IS allowed:</p>
+
+            <div class="success-box">
+                <strong>(A)</strong> For participating in shooting match/target practice under auspices of the agency responsible for the building
+            </div>
+
+            <div class="success-box">
+                <strong>(B)</strong> If necessary for trade show, exhibit, or educational course in the building
+            </div>
+
+            <div class="success-box">
+                <strong>(C)</strong> CHCL holder in motor vehicle or locked/unattended vehicle in publicly owned parking lot
+                <p><em>Note: "Parking lot" does NOT include lots controlled by Division of Correction or Community Correction</em></p>
+            </div>
+
+            <div class="success-box">
+                <strong>(D)</strong> Person with Enhanced CHCL (completed enhanced training under Â§ 5-73-322(g)), EXCEPT in:
+                <ul>
+                    <li>Courtroom or administrative hearing by state agency</li>
+                    <li>Public K-12 school, pre-K, or daycare</li>
+                    <li>Division of Correction or Community Correction facility</li>
+                    <li>Posted firearm-sensitive area (Arkansas State Hospital, UAMS, or collegiate athletic event)</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <strong>(E)</strong> CHCL holder who is Supreme Court Justice or Court of Appeals Judge carrying in Justice Building
+            </div>
+
+            <div class="success-box">
+                <strong>(F)</strong> CHCL holder in municipally owned/maintained park EXCEPT:
+                <ul>
+                    <li>Sports fields where athletic event/practice occurring</li>
+                    <li>Municipal buildings</li>
+                    <li>Leased areas for special events</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>Definition of "Facility"</h4>
+                <p>Â§ 5-73-122(a)(4): "Facility" does NOT mean municipally owned park, sports field, or similar recreational property.</p>
+            </div>
+        </div>
+
+        <!-- Slide 18: Furnishing Firearms to Prohibited Persons -->
+        <div class="slide">
+            <h2>Furnishing Handguns/Firearms to Prohibited Persons</h2>
+            
+            <h3>A.C.A. Â§ 5-73-129(a) - Furnishing Handgun to Felon</h3>
+            <div class="danger-box">
+                <strong>Class B Felony</strong> - 5 to 20 years imprisonment
+            </div>
+            
+            <p>A person commits this offense if the person <strong>knowingly</strong> sells, rents, leases, loans, or gives a handgun to a person who has been convicted of a <strong>felony</strong>.</p>
+
+            <div class="warning-box">
+                <p><strong>Critical Element:</strong> Must <strong>KNOWINGLY</strong> provide to a felon. Added in 2019 amendments.</p>
+            </div>
+
+            <h3>A.C.A. Â§ 5-73-132 - Sale, Rental, or Transfer of Firearm to Prohibited Person</h3>
+            <div class="danger-box">
+                <strong>Class A Misdemeanor</strong> - Up to 1 year jail and/or up to $2,500 fine
+            </div>
+
+            <p>It is unlawful to sell, rent, lease, loan, or give <strong>any firearm</strong> to a person knowing that the person is prohibited from possessing a firearm under state or federal law.</p>
+
+            <h3>Who Is Prohibited Under Arkansas Law?</h3>
+            <p>As discussed under Â§ 5-73-103, persons prohibited include:</p>
+            <ul>
+                <li>Convicted felons (with limited exceptions)</li>
+                <li>Persons adjudicated mentally ill</li>
+                <li>Persons involuntarily committed to mental institution</li>
+                <li>Persons found not guilty by reason of mental disease/defect</li>
+            </ul>
+
+            <h3>Federal Prohibitions - 18 U.S.C. Â§ 922(d)</h3>
+            <p>It is also a federal crime to sell or transfer a firearm to person knowing or having reasonable cause to believe the person:</p>
+            <ul>
+                <li>Is under indictment for or convicted of a felony</li>
+                <li>Is a fugitive from justice</li>
+                <li>Is an unlawful user of or addicted to controlled substance</li>
+                <li>Has been adjudicated mentally defective or committed</li>
+                <li>Is illegally in the United States</li>
+                <li>Has been dishonorably discharged from Armed Forces</li>
+                <li>Has renounced U.S. citizenship</li>
+                <li>Is subject to protective order related to domestic violence</li>
+                <li>Has been convicted of misdemeanor crime of domestic violence</li>
+                <li>Is under 18 years old (for long guns) or under 21 (for handguns)</li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>Practical Advice</h4>
+                <ul>
+                    <li>Do NOT loan or give your firearm to anyone unless you're absolutely certain they're legally allowed to possess it</li>
+                    <li>When selling privately, consider requiring buyer to show CHCL or conducting transfer through licensed dealer</li>
+                    <li>Keep records of any transfers</li>
+                    <li>If in doubt, consult an attorney or use licensed dealer for transfer</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 19: Arkansas CHCL Laws Part 1 -->
+        <div class="slide">
+            <h2>Arkansas Concealed Handgun Carry Licensing Laws</h2>
+            <h3>A.C.A. Â§Â§ 5-73-301 to -329</h3>
+            
+            <div class="info-box">
+                <p><strong>Full Arkansas Code available at:</strong><br>
+                <a href="http://www.lexisnexis.com/hottopics/arcode/Default.asp" target="_blank" style="color: #2c3e50;">http://www.lexisnexis.com/hottopics/arcode/Default.asp</a></p>
+            </div>
+
+            <h3>A.C.A. Â§ 5-73-301 - Definitions</h3>
+            <p>Key terms specific to CHCL law:</p>
+            <ul>
+                <li><strong>"License":</strong> A concealed handgun carry license issued under this subchapter</li>
+                <li><strong>"Licensee":</strong> A person issued a license under this subchapter</li>
+                <li><strong>"Private university or private college":</strong> An institution of higher education that is not operated by the state or a political subdivision</li>
+                <li><strong>"Retired law enforcement officer":</strong> As defined in 18 U.S.C. Â§ 926C</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-73-302 - Authority to Issue License</h3>
+            <p>Director of Arkansas State Police may issue licenses to carry concealed handgun to qualified applicants.</p>
+
+            <h3>A.C.A. Â§ 5-73-303 - Civil Penalty</h3>
+            <p>Carrying in prohibited place may subject licensee to civil penalty of up to $1,000 in addition to criminal charges.</p>
+
+            <h3>A.C.A. Â§ 5-73-304 - Exemptions</h3>
+            <p>Persons exempt from licensing requirements:</p>
+            <ul>
+                <li>Law enforcement officers (active and qualified retired under 18 U.S.C. Â§ 926C)</li>
+                <li>Retired law enforcement officers meeting federal standards</li>
+                <li>Persons authorized under other provisions of law</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-73-305 - Criminal Penalty</h3>
+            <div class="warning-box">
+                <strong>Class A Misdemeanor</strong> to carry concealed handgun in prohibited place - up to 1 year jail and/or up to $2,500 fine
+            </div>
+
+            <h3>A.C.A. Â§ 5-73-306 - Prohibited Places</h3>
+            <p>This critical statute lists 20 categories of locations where carrying is prohibited - covered extensively in dedicated slides coming up.</p>
+
+            <h3>A.C.A. Â§ 5-73-307 - List of License Holders</h3>
+            <p>ASP maintains list of license holders; certain law enforcement have access; generally not public record under Freedom of Information Act.</p>
+        </div>
+
+        <!-- Slide 20: Arkansas CHCL Laws Part 2 -->
+        <div class="slide">
+            <h2>Arkansas CHCL Laws (Continued)</h2>
+            
+            <h3>A.C.A. Â§ 5-73-308 - License - Issuance or Denial</h3>
+            <p>Director <strong>SHALL</strong> issue license if applicant meets requirements; <strong>SHALL</strong> deny if applicant fails to qualify.</p>
+            <p>This is a "shall issue" state - no discretion to deny if you meet requirements.</p>
+
+            <h3>A.C.A. Â§ 5-73-309 - License - Requirements</h3>
+            <p>To qualify for a CHCL, applicant must:</p>
+            <ol>
+                <li>Be <strong>at least 21 years of age</strong> (or 18 if military)</li>
+                <li>Be an <strong>Arkansas resident</strong> for at least 90 days (or military/spouse stationed in Arkansas)</li>
+                <li><strong>Not have been convicted of a felony</strong> (with specific exceptions for certain non-violent business-related felonies)</li>
+                <li>Not be a <strong>fugitive from justice</strong></li>
+                <li>Not <strong>chronically or habitually abuse alcohol</strong> to the extent that normal faculties are impaired</li>
+                <li>Not be <strong>chronically or habitually abuse controlled substances</strong></li>
+                <li>Not have been <strong>adjudicated mentally incompetent</strong></li>
+                <li>Not have been <strong>voluntarily or involuntarily committed</strong> to a mental institution or mental health treatment facility (with exceptions for veterans who seek relief through court process)</li>
+                <li><strong>Not be a medical marijuana patient</strong> - Director shall not consider status as qualifying patient or designated caregiver under Arkansas Medical Marijuana Amendment (2023 change)</li>
+                <li>Demonstrate <strong>competence</strong> with a handgun through approved training</li>
+                <li>Not be subject to a <strong>protection order</strong> for domestic abuse</li>
+                <li>Desire a <strong>legal means to carry a concealed handgun</strong> for self-defense</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>Note on Mental Health:</strong> Per 2023 amendments, an applicant shall not be considered to chronically or habitually abuse a controlled substance based solely on status as medical marijuana patient/caregiver.</p>
+                <p>Section 5-73-327 allows persons who voluntarily sought mental health treatment to petition circuit court for relief from prohibition after 2+ years.</p>
+            </div>
+
+            <h3>A.C.A. Â§ 5-73-310 - Application Form</h3>
+            <p>Application must include:</p>
+            <ul>
+                <li>Name, address, place and date of birth, race, sex</li>
+                <li>Driver's license and Social Security number</li>
+                <li>Previous addresses for past 2 years</li>
+                <li>Questions related to fitness for issuance</li>
+                <li>Statement on crimes of violence or domestic abuse</li>
+                <li>Acknowledgment of reviewing Arkansas CHCL law</li>
+                <li>Warning about false statements</li>
+                <li>Type of license sought (restricted/unrestricted/enhanced)</li>
+            </ul>
+        </div>
+
+        <!-- Slide 21: Arkansas CHCL Laws Part 3 -->
+        <div class="slide">
+            <h2>Arkansas CHCL Laws (Continued)</h2>
+
+            <h3>A.C.A. Â§ 5-73-311 - Application Procedure</h3>
+            <p>Details process for:</p>
+            <ul>
+                <li><strong>Submitting application</strong> - online preferred at ASP website</li>
+                <li><strong>Fingerprints</strong> - electronic submission preferred; 2 rejections require new cards and fee</li>
+                <li><strong>Background checks</strong> - state and federal criminal history</li>
+                <li><strong>Training certification</strong> - from registered instructor</li>
+                <li><strong>Fee payment:</strong>
+                    <ul>
+                        <li><strong>NO FEE</strong> for United States Armed Forces veterans (must submit DD214)</li>
+                        <li><strong>NO FEE</strong> for currently serving military (must submit military ID)</li>
+                        <li>Standard fee for all others (amount set by statute)</li>
+                    </ul>
+                </li>
+                <li>Director shall issue or deny within <strong>120 days</strong> of receipt of proper application</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-73-312 - Revocation</h3>
+            <p><strong>SHALL revoke:</strong> Director must revoke if licensee becomes ineligible under Â§ 5-73-309</p>
+            <p><strong>MAY revoke:</strong> Director may revoke if sheriff, police chief, or director's designee executes affidavit that licensee has been or is reasonably likely to be a danger to self/others or community, or is under criminal investigation</p>
+
+            <h3>A.C.A. Â§ 5-73-313 - Expiration and Renewal</h3>
+            <ul>
+                <li>License valid for <strong>5 years</strong></li>
+                <li>May renew up to <strong>90 days before expiration</strong></li>
+                <li>Renewal requires updated training certification (within 6 months)</li>
+                <li>Late renewals (within 6 months after expiration) subject to late fee</li>
+                <li>After 6 months expired = inactive; must reapply as new applicant</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-73-314 - Lost or Destroyed License - Change of Address</h3>
+            <p>Must notify ASP in writing within <strong>30 days</strong> of:</p>
+            <ul>
+                <li>Change of mailing address</li>
+                <li>Change of permanent address</li>
+                <li>Change of name</li>
+            </ul>
+            <p>Can obtain replacement license for fee.</p>
+
+            <h3>A.C.A. Â§ 5-73-315 - Possession of License - Identification</h3>
+            <div class="danger-box">
+                <p><strong>CRITICAL REQUIREMENT:</strong> When carrying concealed handgun and asked for ID by law enforcement, you MUST:</p>
+                <ol>
+                    <li><strong>Present CHCL</strong> (original or acceptable electronic copy) and photo ID</li>
+                    <li><strong>Notify officer</strong> you hold a concealed handgun carry license</li>
+                    <li><strong>Notify officer</strong> you're in possession of a handgun</li>
+                </ol>
+                <p>If NOT carrying handgun, not required to present CHCL or notify officer.</p>
+            </div>
+        </div>
+
+        <!-- Slide 22: Arkansas CHCL Laws Part 4 & Rules of Criminal Procedure -->
+        <div class="slide">
+            <h2>Arkansas CHCL Laws & Rules of Criminal Procedure</h2>
+
+            <h3>A.C.A. Â§ 5-73-321 - Recognition of Other States' Permits</h3>
+            <p>Arkansas <strong>recognizes</strong> valid concealed carry licenses from <strong>all other states</strong>.</p>
+            <div class="info-box">
+                <p><strong>Reciprocity Important Points:</strong></p>
+                <ul>
+                    <li>Out-of-state license holders are subject to <strong>Arkansas law</strong> while in Arkansas</li>
+                    <li>Out-of-state licenses do NOT get enhanced privileges</li>
+                    <li><strong>Your Responsibility:</strong> Determine which states recognize Arkansas CHCL before traveling</li>
+                    <li>Check ASP website for current reciprocity information</li>
+                </ul>
+            </div>
+
+            <h3>A.C.A. Â§ 5-73-322 - Concealed Handguns in Universities/Colleges</h3>
+            <p>Establishes <strong>Enhanced CHCL</strong> system:</p>
+            <ul>
+                <li>Enhanced training required (approximately 8 hours)</li>
+                <li>Enhanced holders may carry on <strong>public</strong> university/college/community college grounds</li>
+                <li>Enhanced holders may carry in many <strong>government buildings</strong></li>
+                <li><strong>Private universities</strong> may opt out by adopting policy</li>
+                <li><strong>Storage in dormitories PROHIBITED</strong></li>
+                <li>Must remain <strong>concealed</strong> at all times</li>
+                <li>Cannot carry into official grievance/disciplinary meetings</li>
+            </ul>
+
+            <h3>A.C.A. Â§ 5-73-325 - Firearm-Sensitive Areas</h3>
+            <p>Arkansas State Hospital, UAMS, and collegiate athletic events may establish firearm-sensitive areas with approved security plan submitted to ASP.</p>
+
+            <h3>A.C.A. Â§ 5-73-329 - Purpose and Construction</h3>
+            <div class="success-box">
+                <p><strong>CRITICAL CLARIFICATION (added 2023):</strong></p>
+                <ul>
+                    <li>(a) PURPOSE of CHCL law is to establish licensing for <strong>reciprocity in other states</strong> that require a license</li>
+                    <li>(b) This subchapter does <strong>NOT require</strong> a person to obtain a license to carry concealed in Arkansas</li>
+                </ul>
+                <p><strong>Arkansas is "constitutional carry" state</strong>, but the license provides reciprocity and certain legal benefits.</p>
+            </div>
+
+            <h3>Arkansas Rules of Criminal Procedure</h3>
+            <div class="info-box">
+                <p><strong>Full text:</strong> <a href="https://rules.arcourts.gov/w/ark/rules-of-criminal-procedure" target="_blank" style="color: #2c3e50;">https://rules.arcourts.gov/w/ark/rules-of-criminal-procedure</a></p>
+            </div>
+
+            <p><strong>Rule 3.1 - Stopping and Detention:</strong> Officer may stop with reasonable suspicion of criminal activity</p>
+            <p><strong>Rule 3.4 - Search for Weapons:</strong> Officer may pat down if reasonable belief person is armed and dangerous</p>
+
+            <div class="warning-box">
+                <h4>Practical Advice for Traffic Stops:</h4>
+                <ul>
+                    <li>Keep hands visible on steering wheel</li>
+                    <li>Inform officer immediately you have CHCL and are carrying</li>
+                    <li>Tell officer where firearm is located</li>
+                    <li>Follow all officer commands</li>
+                    <li>Don't reach for anything without telling officer first</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 8: PROHIBITED LOCATIONS - Part 1 -->
+        <div class="slide">
+            <h2>PROHIBITED LOCATIONS - Where You CANNOT Carry</h2>
+            
+            <div class="danger-box">
+                <strong>CRITICAL:</strong> Violation of prohibited place restrictions is a <strong>Class A Misdemeanor</strong> and will result in <strong>suspension or revocation of your license</strong>.
+            </div>
+
+            <h3>Schools (A.C.A. Â§ 5-73-119)</h3>
+            <p><strong>Class D Felony</strong> to possess a firearm:</p>
+            <ul>
+                <li>On developed property of public or private school (K-12)</li>
+                <li>In or upon any school bus</li>
+                <li>At a designated school bus stop</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>Exceptions:</strong> In your own dwelling/business, law enforcement, security guards, on a journey, certified hunting safety course, school-approved activity, licensed holder in motor vehicle or in parking lot (locked and unattended), private schools with specific permissions.
+            </div>
+
+            <h3>Higher Education (A.C.A. Â§ 5-73-119(c))</h3>
+            <p>Prohibited on property of public or private institutions of higher education with purpose to employ as a weapon, EXCEPT:</p>
+            <ul>
+                <li>Law enforcement officers</li>
+                <li>Licensed holders in locked motor vehicle in parking lot</li>
+                <li><strong>Storage in dormitories or residence halls is PROHIBITED</strong></li>
+            </ul>
+
+            <h3>Law Enforcement Facilities (A.C.A. Â§ 5-73-306)</h3>
+            <p>Prohibited in:</p>
+            <ul>
+                <li>Any police station, sheriff's station, or Arkansas State Police station</li>
+                <li>Arkansas Highway Police Division facilities</li>
+                <li>Any detention facility, prison, or jail, including parking lots controlled by Division of Correction or Community Correction</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9: PROHIBITED LOCATIONS - Part 2 -->
+        <div class="slide">
+            <h2>PROHIBITED LOCATIONS (Continued)</h2>
+            
+            <h3>Publicly Owned Buildings (A.C.A. Â§ 5-73-122)</h3>
+            <p><strong>Class C Misdemeanor</strong> to carry in publicly owned building or facility or State Capitol grounds.</p>
+            
+            <div class="warning-box">
+                <strong>Exceptions:</strong>
+                <ul>
+                    <li>Law enforcement/security guards</li>
+                    <li>For shooting matches or trade shows at the facility</li>
+                    <li>Licensed holder in locked motor vehicle in parking lot</li>
+                    <li>Municipal parks (with restrictions - no sports fields during events, no municipal buildings, no special event areas)</li>
+                </ul>
+            </div>
+
+            <h3>Courthouses and Courtrooms (A.C.A. Â§ 5-73-306(5-6))</h3>
+            <p>Prohibited in:</p>
+            <ul>
+                <li>Any courthouse, courthouse annex, or county building used for court proceedings or housing a county office</li>
+                <li>Any courtroom</li>
+            </ul>
+            
+            <div class="success-box">
+                <h4>Exceptions - Who CAN Carry in Courthouses (Â§ 5-73-306(5))</h4>
+                <p><strong>2024 Expanded:</strong> The following licensees MAY carry in courthouses if ALL conditions are met:</p>
+                <ol>
+                    <li><strong>(A) The licensee is:</strong>
+                        <ul>
+                            <li>(i) Employed by the county, OR</li>
+                            <li>(ii) A countywide elected official, OR</li>
+                            <li>(iii) A justice of the peace, OR</li>
+                            <li>(iv) Employed by ANY governmental entity (not just county) with an office or place of employment inside the courthouse/courthouse annex/county building</li>
+                        </ul>
+                    </li>
+                    <li><strong>(B) AND</strong> The licensee's <strong>principal place of employment</strong> is within the courthouse, courthouse annex, or county building</li>
+                    <li><strong>(C) AND</strong> The <strong>quorum court by ordinance approves a plan</strong> that allows these licensees to carry a concealed handgun as set out by the local security and emergency preparedness plan</li>
+                </ol>
+                
+                <p><strong>Important Limitation:</strong> Under Â§ 5-73-306(5)(A)(iv)(b), if you're employed by a governmental entity OTHER than the county, you're limited to carrying ONLY in the building where your office or place of employment is located.</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>Courtroom Exception (Â§ 5-73-306(6))</h4>
+                <p>Judges may authorize specific persons to carry in their courtrooms. This is at the judge's complete discretion.</p>
+            </div>
+            
+            <div class="warning-box">
+                <h4>Key Requirements - All 3 Must Be Met:</h4>
+                <ol>
+                    <li>You must fit into one of the four categories of eligible licensees</li>
+                    <li>Your principal place of employment must be IN the courthouse/county building</li>
+                    <li>Your county's quorum court must have passed an ordinance approving a security plan</li>
+                </ol>
+                <p><strong>If ANY of these is missing, you CANNOT carry in the courthouse!</strong></p>
+                <p><strong>Check with your county to see if they have an approved ordinance before carrying in courthouse.</strong></p>
+            </div>
+
+            <h3>Government Meetings (A.C.A. Â§ 5-73-306(7-9))</h3>
+            <p>Prohibited at:</p>
+            <ul>
+                <li>Any meeting place of governing body of governmental unit</li>
+                <li>Any General Assembly or committee meeting</li>
+                <li>Any state office</li>
+            </ul>
+
+            <h3>Athletic Events (A.C.A. Â§ 5-73-306(10))</h3>
+            <p>Prohibited at any athletic event not related to firearms</p>
+
+            <h3>Airports (A.C.A. Â§ 5-73-306(14))</h3>
+            <p>Prohibited <strong>inside the passenger terminal</strong> of any airport</p>
+            <div class="warning-box">
+                <strong>Note:</strong> "Passenger terminal" means ticketing area, lobby, and baggage claim. Does NOT include sterile areas or beyond security checkpoints (those are prohibited by federal law). Exception for firearms encased for shipment as checked baggage.
+            </div>
+        </div>
+
+        <!-- Slide 10: PROHIBITED LOCATIONS - Part 3 -->
+        <div class="slide">
+            <h2>PROHIBITED LOCATIONS (Continued)</h2>
+            
+            <h3>Establishments Serving Alcohol (A.C.A. Â§ 5-73-306(11-12))</h3>
+            <p>Prohibited in portions of establishments (except restaurants) where:</p>
+            <ul>
+                <li>Alcoholic beverages are dispensed for on-premises consumption</li>
+                <li>Beer or light wine is consumed on premises</li>
+            </ul>
+            <div class="info-box">
+                <strong>Restaurant Exception:</strong> Defined in A.C.A. Â§ 3-5-1202 - establishments primarily serving food may allow carry.
+            </div>
+
+            <h3>Schools and Educational Events (A.C.A. Â§ 5-73-306(13))</h3>
+            <p>Prohibited at school, college, community college, or university campus building or event</p>
+            <div class="info-box">
+                <strong>Exceptions:</strong> Authorized firearms-related activities, locked vehicle in parking lot, private schools with specific permissions
+            </div>
+
+            <h3>Churches and Places of Worship (A.C.A. Â§ 5-73-306(15))</h3>
+            <p>Prohibited in any church or place of worship</p>
+            <div class="success-box">
+                <strong>Exception:</strong> The church/place of worship may determine who can carry. They control their own property.
+            </div>
+
+            <h3>Federal Prohibited Places (A.C.A. Â§ 5-73-306(16))</h3>
+            <div class="danger-box">
+                <p>Any place where carrying is prohibited by <strong>federal law</strong>, including:</p>
+                <ul>
+                    <li>Federal buildings and courthouses</li>
+                    <li>Federal property</li>
+                    <li>Secured areas of airports (beyond TSA checkpoints)</li>
+                    <li>On aircraft</li>
+                    <li>Post offices</li>
+                </ul>
+                <p><strong>Violation can result in FEDERAL criminal charges!</strong></p>
+            </div>
+
+            <h3>Parades/Demonstrations (A.C.A. Â§ 5-73-306(17))</h3>
+            <p>Prohibited at any parade or demonstration requiring a permit if you are a participant</p>
+        </div>
+
+        <!-- Slide 11: PROHIBITED LOCATIONS - Part 4 -->
+        <div class="slide">
+            <h2>PROHIBITED LOCATIONS - Private Property</h2>
+            
+            <h3>Posted Prohibited Places (A.C.A. Â§ 5-73-306(18))</h3>
+            <p>Any place may prohibit carry by posting written notice:</p>
+            <ul>
+                <li>Notice must be <strong>clearly readable at 10 feet</strong></li>
+                <li>Must state: <strong>"carrying a handgun is prohibited"</strong></li>
+                <li>If no roadway entrance: post anywhere on premises</li>
+                <li>Must be at least one sign per 3 acres if no roadway entrance</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Does NOT apply to:</strong>
+                <ul>
+                    <li>Public universities/colleges/community colleges</li>
+                    <li>Publicly owned parking lots</li>
+                    <li>Private employer parking lots (for employees)</li>
+                    <li>Places owned by local government (with restrictions)</li>
+                </ul>
+            </div>
+
+            <h3>Verbal/Written Notice (A.C.A. Â§ 5-73-306(19))</h3>
+            <p>Private entities may prohibit carry by providing written OR verbal notice to licensee</p>
+            <div class="danger-box">
+                <strong>Once notified:</strong> You violate the law if you:
+                <ul>
+                    <li>Remain at the location while carrying, OR</li>
+                    <li>Return to the location while carrying</li>
+                </ul>
+            </div>
+
+            <h3>Firearm-Sensitive Areas (A.C.A. Â§ 5-73-306(20), Â§ 5-73-325)</h3>
+            <p>Posted firearm-sensitive areas approved by Arkansas State Police located at:</p>
+            <ul>
+                <li>Arkansas State Hospital</li>
+                <li>University of Arkansas for Medical Sciences (UAMS)</li>
+                <li>Collegiate athletic events</li>
+            </ul>
+            <div class="info-box">
+                These locations must submit and receive approval for a security plan including attendance projections, security personnel, evacuation procedures, and security measures.
+            </div>
+
+            <h3>Private Homes</h3>
+            <ul>
+                <li>No written notice required for private homes</li>
+                <li><strong>You must notify the occupant that you are carrying</strong></li>
+                <li>Respect the wishes of the homeowner</li>
+            </ul>
+        </div>
+
+        <!-- Slide 12: Encounters with Law Enforcement -->
+        <div class="slide">
+            <h2>Part IV: Encounters with Law Enforcement</h2>
+            
+            <div class="danger-box">
+                <h4>If you use your firearm in ANY incident, call law enforcement immediately!</h4>
+            </div>
+
+            <h3>License Possession Requirements (A.C.A. Â§ 5-73-315)</h3>
+            <p>You must carry your license (or acceptable electronic copy) at all times when in possession of a concealed handgun.</p>
+
+            <h3>When Carrying and Stopped by Police:</h3>
+            <div class="warning-box">
+                <p><strong>IF CARRYING A HANDGUN</strong> and asked for identification:</p>
+                <ol>
+                    <li>Present your <strong>CHCL and photo ID</strong></li>
+                    <li>Notify the officer you hold a CHCL</li>
+                    <li>Notify the officer you have a handgun in your possession</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                <p><strong>IF NOT CARRYING</strong> and asked for identification:</p>
+                <ul>
+                    <li>You are <strong>NOT required</strong> to present your CHCL</li>
+                    <li>You are NOT required to notify the officer you have a license</li>
+                </ul>
+            </div>
+
+            <h3>Best Practices During Traffic Stops</h3>
+            <ul>
+                <li>Keep your hands visible on the steering wheel</li>
+                <li>Turn on interior lights if nighttime</li>
+                <li>Inform the officer of your license and that you're armed</li>
+                <li>Tell the officer where your firearm is located</li>
+                <li>Ask the officer how they would like you to proceed</li>
+                <li>Move slowly and deliberately - announce your movements</li>
+                <li>Never reach for your firearm unless instructed by the officer</li>
+                <li>Follow all commands immediately</li>
+                <li>Be respectful and cooperative</li>
+            </ul>
+
+            <h3>Acceptable Photo Identification</h3>
+            <ul>
+                <li>Current and valid Arkansas driver's license</li>
+                <li>Current and valid military identification card</li>
+                <li>Current and valid U.S. passport</li>
+            </ul>
+            <p><strong>Photocopies are NOT acceptable</strong></p>
+
+            <h3>Arkansas Rules of Criminal Procedure</h3>
+            <ul>
+                <li><strong>Rule 3.1:</strong> Officers may stop and detain for reasonable suspicion</li>
+                <li><strong>Rule 3.4:</strong> Officers may search for weapons if reasonable belief person is armed and dangerous</li>
+            </ul>
+        </div>
+
+        <!-- Slide 13: Handgun Inspection -->
+        <div class="slide">
+            <h2>Part V: Inspection of the Handgun</h2>
+            
+            <div class="success-box">
+                <strong>Inspect your handgun EVERY TIME before carrying it</strong>
+            </div>
+
+            <h3>Pre-Carry Inspection Checklist</h3>
+            <ol>
+                <li><strong>Barrel</strong>
+                    <ul>
+                        <li>Unload and open the handgun</li>
+                        <li>Look inside barrel for dirt or obstructions</li>
+                        <li>Even small obstructions can cause catastrophic failure</li>
+                    </ul>
+                </li>
+                <li><strong>Interior Surfaces</strong>
+                    <ul>
+                        <li>Check for dirt or rust</li>
+                        <li>Clean if necessary</li>
+                    </ul>
+                </li>
+                <li><strong>Moving Parts</strong>
+                    <ul>
+                        <li><strong>Revolvers:</strong> Check ejector for ease of movement and binding</li>
+                        <li><strong>Semi-automatics:</strong> Check slide for smooth operation</li>
+                    </ul>
+                </li>
+                <li><strong>Hammer</strong>
+                    <ul>
+                        <li>Move hammer to cocked position</li>
+                        <li>Check hammer well for dirt, rust, or obstructions</li>
+                        <li>Clean with toothpick if needed</li>
+                    </ul>
+                </li>
+                <li><strong>Trigger Operation</strong>
+                    <ul>
+                        <li>Test trigger pull (with unloaded gun)</li>
+                        <li>Should be smooth without catching or grinding</li>
+                    </ul>
+                </li>
+                <li><strong>Overall Condition</strong>
+                    <ul>
+                        <li>Check for cracks or damage</li>
+                        <li>Ensure all parts are secure</li>
+                        <li>Verify sights are intact</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="danger-box">
+                <strong>NEVER carry a handgun that is:</strong>
+                <ul>
+                    <li>Dirty or corroded</li>
+                    <li>Damaged or has loose parts</li>
+                    <li>Has not been recently inspected</li>
+                    <li>Malfunctioning in any way</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 14: Types of Handguns - Revolvers -->
+        <div class="slide">
+            <h2>Part VI: Types of Handguns - Revolvers</h2>
+            
+            <h3>Definition</h3>
+            <p>A <strong>handgun</strong> is any firearm, other than a fully automatic firearm, with a barrel length less than 12 inches that is designed to be fired with one hand.</p>
+
+            <h3>Revolver Basics</h3>
+            <p>A revolver holds ammunition in a rotating cylinder and can be fired with the hammer forward or cocked.</p>
+
+            <h3>Revolver Parts</h3>
+            <ul>
+                <li><strong>Frame:</strong> Main body including hammer, hammer spur, and cylinder release</li>
+                <li><strong>Cylinder:</strong> Rotating part that holds ammunition (typically 5-6 rounds)</li>
+                <li><strong>Barrel:</strong> Through which the bullet travels</li>
+                <li><strong>Grip:</strong> Handle portion</li>
+            </ul>
+
+            <h3>Single Action Operation</h3>
+            <ul>
+                <li>Hammer must be manually cocked before each shot</li>
+                <li>Lighter trigger pull - <strong>more accurate but more dangerous</strong></li>
+                <li>Slight bump can cause discharge when cocked</li>
+                <li>Best for target shooting, not self-defense</li>
+            </ul>
+
+            <h3>Double Action Operation</h3>
+            <ul>
+                <li>Trigger pull cocks and releases hammer</li>
+                <li>Heavier trigger pull - <strong>safer for stress situations</strong></li>
+                <li>Requires intentional action to fire</li>
+                <li>Recommended for concealed carry</li>
+            </ul>
+
+            <h3>Loading a Revolver (Right-handed)</h3>
+            <ol>
+                <li>Point firearm toward ground</li>
+                <li>Release cylinder latch and swing cylinder out</li>
+                <li>Place rounds in chambers with right hand</li>
+                <li>Close cylinder gently - listen for snap/click</li>
+                <li>Rotate cylinder to ensure it locks</li>
+                <li><strong>NEVER slam cylinder shut - damages the gun!</strong></li>
+            </ol>
+
+            <h3>Unloading a Revolver</h3>
+            <ol>
+                <li>Keep barrel pointed safe direction</li>
+                <li>Open cylinder</li>
+                <li>Point barrel upward</li>
+                <li>Press ejector rod - rounds should fall out</li>
+                <li>Visually verify all chambers are empty</li>
+                <li>Leave cylinder open when setting down</li>
+            </ol>
+
+            <h3>Mechanical Safeties</h3>
+            <ul>
+                <li><strong>Transfer Bar:</strong> Prevents firing unless trigger pulled</li>
+                <li><strong>Hammer Blocks:</strong> Blocks hammer from striking firing pin</li>
+            </ul>
+        </div>
+
+        <!-- Slide 15: Types of Handguns - Semi-Automatics -->
+        <div class="slide">
+            <h2>Types of Handguns - Semi-Automatic Pistols</h2>
+            
+            <h3>Semi-Automatic Basics</h3>
+            <p>When fired, a semi-automatic pistol automatically extracts and ejects the empty case and chambers a new round with each trigger pull.</p>
+
+            <h3>Semi-Automatic Parts</h3>
+            <ul>
+                <li><strong>Frame:</strong> Main body including trigger, hammer, and safety</li>
+                <li><strong>Slide:</strong> Top portion that moves during firing cycle</li>
+                <li><strong>Barrel:</strong> Through which bullet travels</li>
+                <li><strong>Grip:</strong> Handle portion (houses magazine)</li>
+                <li><strong>Magazine:</strong> Removable container that holds ammunition</li>
+            </ul>
+
+            <h3>Loading a Semi-Automatic</h3>
+            <ol>
+                <li>Hold handgun in firing grip, pointed safe direction</li>
+                <li>Insert loaded magazine until it clicks</li>
+                <li>Grasp slide and pull fully to rear</li>
+                <li>Release slide - it will chamber a round</li>
+                <li>Apply safety if equipped</li>
+            </ol>
+
+            <h3>Unloading a Semi-Automatic</h3>
+            <ol>
+                <li>Point in safe direction</li>
+                <li>Press magazine release and remove magazine</li>
+                <li>Pull slide to rear and lock open</li>
+                <li>Visually and physically check chamber is empty</li>
+                <li>Release slide or holster with slide locked back</li>
+            </ol>
+
+            <h3>Types of Safeties</h3>
+            <ul>
+                <li><strong>Manual Safety:</strong> Lever that blocks trigger or firing pin</li>
+                <li><strong>Grip Safety:</strong> Must be depressed to fire</li>
+                <li><strong>Trigger Safety:</strong> Part of trigger that must be depressed</li>
+                <li><strong>Firing Pin Block:</strong> Prevents firing pin from moving forward</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Remember:</strong> Safeties are mechanical devices and CAN FAIL. Always follow all safety rules regardless of safety status.
+            </div>
+
+            <h3>Single Action vs. Double Action</h3>
+            <ul>
+                <li><strong>Single Action:</strong> Trigger only releases hammer (hammer must be cocked first)</li>
+                <li><strong>Double Action:</strong> Trigger cocks and releases hammer</li>
+                <li><strong>DA/SA:</strong> First shot double action, subsequent shots single action</li>
+                <li><strong>Striker-Fired:</strong> No external hammer, consistent trigger pull</li>
+            </ul>
+        </div>
+
+        <!-- Slide 16: Ammunition -->
+        <div class="slide">
+            <h2>Part VII: Ammunition</h2>
+            
+            <h3>Four Basic Components</h3>
+            <ol>
+                <li><strong>Case:</strong> Holds all components together (usually brass)</li>
+                <li><strong>Bullet:</strong> The projectile (usually lead, may have jacket)</li>
+                <li><strong>Powder:</strong> Explosive propellant</li>
+                <li><strong>Primer:</strong> Small charge that ignites the powder</li>
+            </ol>
+
+            <h3>Common Bullet Types</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Characteristics</th>
+                    <th>Recommendation</th>
+                </tr>
+                <tr>
+                    <td><strong>Wad Cutter</strong></td>
+                    <td>Flat end, low penetration, makes clean holes in paper targets</td>
+                    <td>Practice only - NOT for carry</td>
+                </tr>
+                <tr>
+                    <td><strong>Ball/FMJ</strong></td>
+                    <td>Round nose, high penetration, passes through target</td>
+                    <td>NOT recommended - dangerous to bystanders</td>
+                </tr>
+                <tr>
+                    <td><strong>Hollow Point</strong></td>
+                    <td>Expands on impact, good stopping power, less over-penetration</td>
+                    <td><strong>RECOMMENDED for carry</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Armor Piercing</strong></td>
+                    <td>Hardened steel, extreme penetration, poor stopping power</td>
+                    <td>NOT recommended - dangerous over-penetration</td>
+                </tr>
+            </table>
+
+            <h3>Matching Ammunition to Your Handgun</h3>
+            <div class="danger-box">
+                <strong>CRITICAL SAFETY:</strong>
+                <ul>
+                    <li>Always use ammunition that matches your firearm's caliber marking</li>
+                    <li>Using wrong ammunition can cause catastrophic failure, injury, or death</li>
+                    <li>Check ammunition before loading EVERY TIME</li>
+                    <li>When in doubt, consult the owner's manual or a gunsmith</li>
+                </ul>
+            </div>
+
+            <h3>Reloads/Remanufactured Ammunition</h3>
+            <ul>
+                <li>Can be reliable if loaded properly</li>
+                <li>Quality varies greatly</li>
+                <li>Some manufacturers void warranty if reloads are used</li>
+                <li>For carry, use factory ammunition from reputable manufacturers</li>
+            </ul>
+
+            <h3>How Ammunition Works</h3>
+            <ol>
+                <li>Trigger releases hammer</li>
+                <li>Hammer strikes firing pin</li>
+                <li>Firing pin strikes primer</li>
+                <li>Primer ignites powder</li>
+                <li>Expanding gases propel bullet through barrel</li>
+            </ol>
+
+            <h3>Ammunition Storage</h3>
+            <ul>
+                <li>Store in cool, dry place</li>
+                <li>Keep away from heat sources and moisture</li>
+                <li>Store separately from firearms</li>
+                <li>Keep out of reach of children</li>
+                <li>Inspect periodically for corrosion or damage</li>
+            </ul>
+        </div>
+
+        <!-- Slide 17: Cleaning and Storage -->
+        <div class="slide">
+            <h2>Part VIII: Cleaning and Storage of Handgun</h2>
+            
+            <h3>Cleaning Your Handgun</h3>
+            <div class="success-box">
+                <strong>Clean the bore EVERY TIME you shoot</strong>
+            </div>
+
+            <h3>Cleaning Frequency</h3>
+            <ul>
+                <li><strong>After every use:</strong> Clean barrel/bore</li>
+                <li><strong>Every 300 rounds:</strong> Field strip and clean (semi-automatics)</li>
+                <li><strong>Monthly:</strong> Basic cleaning even if not fired</li>
+                <li><strong>After exposure to moisture:</strong> Clean and oil immediately</li>
+            </ul>
+
+            <h3>Basic Cleaning Supplies</h3>
+            <ul>
+                <li>Gun cleaning solvent</li>
+                <li>Gun oil/lubricant</li>
+                <li>Bore brush (correct caliber)</li>
+                <li>Cleaning patches</li>
+                <li>Cleaning rod or bore snake</li>
+                <li>Toothbrush (for detailed cleaning)</li>
+                <li>Clean rags</li>
+            </ul>
+
+            <h3>Cleaning Safety Rules</h3>
+            <div class="danger-box">
+                <ul>
+                    <li><strong>ALWAYS unload and verify empty before cleaning</strong></li>
+                    <li>Remove all ammunition from cleaning area</li>
+                    <li>Clean in well-ventilated area</li>
+                    <li>Follow manufacturer's disassembly instructions</li>
+                    <li>Do NOT over-disassemble - only field strip as recommended</li>
+                </ul>
+            </div>
+
+            <h3>Proper Storage</h3>
+            <div class="warning-box">
+                <strong>Store firearms and ammunition SEPARATELY and in locations inaccessible to children or unauthorized persons</strong>
+            </div>
+
+            <h3>Storage Options</h3>
+            <ul>
+                <li><strong>Gun Safes:</strong> Best option - bolt to floor/wall</li>
+                <li><strong>Lockboxes:</strong> Quick access with security</li>
+                <li><strong>Trigger Locks:</strong> Additional security layer</li>
+                <li><strong>Cable Locks:</strong> Prevent action from closing</li>
+            </ul>
+
+            <h3>Storage Best Practices</h3>
+            <ul>
+                <li>Store unloaded</li>
+                <li>Store in cool, dry location</li>
+                <li>Use desiccants to control moisture</li>
+                <li>Teach gun safety to all family members</li>
+                <li>Consider quick-access safes for home defense firearms</li>
+                <li>Regularly inspect stored firearms</li>
+            </ul>
+
+            <h3>Children and Firearms</h3>
+            <ul>
+                <li>Assume children will find any "hidden" firearm</li>
+                <li>Teach gun safety through age-appropriate programs</li>
+                <li>Eddie Eagle program for young children</li>
+                <li>Always supervise children around firearms</li>
+                <li>Lock up ALL firearms when not in use</li>
+            </ul>
+        </div>
+
+        <!-- Slide 18: Carrying Concealed -->
+        <div class="slide">
+            <h2>Part IX: Carrying Concealed</h2>
+            
+            <h3>What Does "Concealed" Mean?</h3>
+            <p><strong>"Concealed"</strong> means to cover from observation to prevent public view.</p>
+
+            <div class="warning-box">
+                <p>Your handgun must be completely hidden from ordinary observation. "Printing" (outline showing through clothing) should be minimized.</p>
+            </div>
+
+            <h3>Choosing Your Carry Method</h3>
+            <p>Consider these factors:</p>
+            <ul>
+                <li><strong>Weapon size and type</strong> - larger guns harder to conceal</li>
+                <li><strong>Body type</strong> - what works for others may not work for you</li>
+                <li><strong>Clothing style</strong> - dress code limitations</li>
+                <li><strong>Climate</strong> - seasonal clothing changes</li>
+                <li><strong>Accessibility</strong> - can you draw quickly if needed?</li>
+                <li><strong>Comfort</strong> - will you actually carry it?</li>
+                <li><strong>Retention</strong> - gun stays secure during normal activity</li>
+            </ul>
+
+            <h3>Common Carry Methods</h3>
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                </tr>
+                <tr>
+                    <td><strong>Inside Waistband (IWB)</strong></td>
+                    <td>Good concealment, comfortable with proper holster</td>
+                    <td>Requires larger pants, can be uncomfortable sitting</td>
+                </tr>
+                <tr>
+                    <td><strong>Outside Waistband (OWB)</strong></td>
+                    <td>Comfortable, easy draw</td>
+                    <td>Harder to conceal, requires cover garment</td>
+                </tr>
+                <tr>
+                    <td><strong>Appendix Carry</strong></td>
+                    <td>Fast access, good concealment</td>
+                    <td>Uncomfortable for some, safety concerns</td>
+                </tr>
+                <tr>
+                    <td><strong>Shoulder Holster</strong></td>
+                    <td>Comfortable for long periods, works with suits</td>
+                    <td>Requires jacket, muzzle crosses others during draw</td>
+                </tr>
+                <tr>
+                    <td><strong>Ankle Holster</strong></td>
+                    <td>Deep concealment, backup gun option</td>
+                    <td>Slow draw, limited to small guns, difficult while seated</td>
+                </tr>
+                <tr>
+                    <td><strong>Pocket Carry</strong></td>
+                    <td>Very concealable, casual</td>
+                    <td>Limited to very small guns, requires pocket holster</td>
+                </tr>
+                <tr>
+                    <td><strong>Belly Band</strong></td>
+                    <td>Versatile, works with athletic wear</td>
+                    <td>Less secure, can be uncomfortable</td>
+                </tr>
+                <tr>
+                    <td><strong>Purse/Bag</strong></td>
+                    <td>Comfortable, no special clothing needed</td>
+                    <td>Slow access, can be separated from you, NOT recommended</td>
+                </tr>
+            </table>
+
+            <div class="danger-box">
+                <strong>Off-Body Carry Warning:</strong> Carrying in purse, bag, or backpack is generally NOT recommended because:
+                <ul>
+                    <li>Can be set down or taken from you</li>
+                    <li>Slower access in emergency</li>
+                    <li>Children or others may access</li>
+                    <li>If you must use off-body carry, use dedicated concealed carry purse with locking compartment</li>
+                </ul>
+            </div>
+
+            <h3>Practice!</h3>
+            <ul>
+                <li>Practice drawing from concealment (with UNLOADED gun)</li>
+                <li>Practice re-holstering safely</li>
+                <li>Practice at home in private</li>
+                <li>Ensure you can access firearm while seated, standing, or moving</li>
+                <li>Time to draw is NOT the time to figure out your holster</li>
+            </ul>
+        </div>
+
+        <!-- Slide 19: Range Safety Part 1 -->
+        <div class="slide">
+            <h2>Part XII: Handgun Safety Rules</h2>
+            
+            <div class="danger-box">
+                <h3>The Four Cardinal Rules of Firearm Safety</h3>
+                <ol>
+                    <li><strong>Treat ALL firearms as if they are ALWAYS loaded</strong></li>
+                    <li><strong>NEVER point a firearm at anything you are not willing to destroy</strong></li>
+                    <li><strong>Keep your finger OFF the trigger until ready to shoot</strong></li>
+                    <li><strong>Be sure of your target and what is beyond it</strong></li>
+                </ol>
+            </div>
+
+            <h3>Essential Safety Rules for Concealed Carry</h3>
+            <ol>
+                <li><strong>A gun is ALWAYS loaded - NEVER ASSUME!</strong>
+                    <ul><li>Always personally verify the gun is unloaded</li></ul>
+                </li>
+                <li><strong>Secure your handgun from children</strong>
+                    <ul><li>Even well-behaved children are curious</li>
+                    <li>"Hidden" is never hidden well enough</li></ul>
+                </li>
+                <li><strong>Set all safety locks after loading</strong>
+                    <ul><li>Remember: Safeties are mechanical and can fail</li></ul>
+                </li>
+                <li><strong>Store firearms and ammunition separately</strong>
+                    <ul><li>In locations inaccessible to unauthorized persons</li></ul>
+                </li>
+                <li><strong>NEVER point a handgun at anyone you are not prepared to kill</strong>
+                    <ul><li>There are no "warning shots"</li>
+                    <li>Once you point a gun, you've made a lethal force decision</li></ul>
+                </li>
+                <li><strong>NEVER remove your handgun from holster unless needed to protect life</strong>
+                    <ul><li>Your life or the life of another person</li></ul>
+                </li>
+                <li><strong>NEVER put finger in trigger guard until ready to shoot</strong>
+                    <ul><li>Keep finger indexed along frame/slide</li></ul>
+                </li>
+                <li><strong>NEVER carry in the cocked position</strong>
+                    <ul><li>Applies primarily to single-action firearms</li></ul>
+                </li>
+                <li><strong>NEVER show off or handle handgun in public</strong>
+                    <ul><li>Must remain concealed unless life in danger</li></ul>
+                </li>
+                <li><strong>NEVER use handgun as a threat or display it to intimidate</strong>
+                    <ul><li>Brandishing is a crime</li>
+                    <li>Use only as absolute last resort</li></ul>
+                </li>
+                <li><strong>NEVER practice anywhere except approved locations</strong>
+                    <ul><li>Authorized ranges only</li></ul>
+                </li>
+                <li><strong>NEVER carry when drinking alcohol or using impairing drugs</strong>
+                    <ul><li>Includes prescription and over-the-counter medications that affect judgment or coordination</li></ul>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Slide 20: Range Safety Part 2 -->
+        <div class="slide">
+            <h2>Part XIII: Firearms Range Safety Rules</h2>
+            
+            <div class="warning-box">
+                <strong>Strict discipline must be maintained at ALL times on the range. Violations may result in immediate removal from the course.</strong>
+            </div>
+
+            <h3>General Range Rules</h3>
+            <ol>
+                <li><strong>ALWAYS follow Range Master instructions</strong></li>
+                <li><strong>Upon arrival, place handgun on bench UNLOADED</strong>
+                    <ul>
+                        <li>Cylinder open for revolvers</li>
+                        <li>Slide locked back for semi-automatics</li>
+                        <li>Step back for Range Master to inspect</li>
+                    </ul>
+                </li>
+                <li><strong>Weapons remain in holsters except on firing line</strong></li>
+                <li><strong>No "dry firing" except under Range Officer supervision</strong></li>
+                <li><strong>NEVER load firearm unless on firing line and commanded to do so</strong></li>
+                <li><strong>Do not speak to anyone on firing line</strong>
+                    <ul><li>Except Range Officer, coaching, or being coached</li></ul>
+                </li>
+                <li><strong>If spoken to on firing line, do NOT turn around to reply</strong></li>
+                <li><strong>All weapons pointed down range when loading</strong></li>
+                <li><strong>Check barrel for obstructions before loading</strong></li>
+                <li><strong>Misfire or malfunction - keep gun pointed downrange, call Range Officer</strong></li>
+            </ol>
+
+            <h3>Commands and Procedures</h3>
+            <ul>
+                <li><strong>"Step to the line"</strong> - Move to firing line, DO NOT TOUCH GUN OR AMMUNITION</li>
+                <li><strong>"The line is HOT"</strong> - Range Master declares, you may now handle firearms</li>
+                <li><strong>"Load"</strong> - Load your firearm</li>
+                <li><strong>"Commence fire"</strong> - Begin shooting exercise</li>
+                <li><strong>"Cease fire"</strong> - IMMEDIATELY stop shooting, keep gun pointed downrange</li>
+                <li><strong>"Unload and show clear"</strong> - Unload and show Range Officer gun is empty</li>
+                <li><strong>"The line is COLD"</strong> - All guns are unloaded and verified, may move downrange</li>
+            </ul>
+
+            <h3>Additional Safety Rules</h3>
+            <ul>
+                <li>NEVER lay down a loaded firearm</li>
+                <li>NEVER move toward targets without Range Master permission</li>
+                <li>Be careful not to drop ammunition</li>
+                <li>Horseplay is STRICTLY FORBIDDEN</li>
+                <li>If you have problems, raise free hand and call for assistance</li>
+                <li>Eye and ear protection REQUIRED at all times</li>
+            </ul>
+
+            <div class="danger-box">
+                <strong>EMERGENCY CEASE FIRE:</strong> Anyone may call "CEASE FIRE" if unsafe condition observed. ALL shooting stops immediately. All guns remain pointed downrange.
+            </div>
+        </div>
+
+        <!-- Slide 21: Shooting Fundamentals Part 1 -->
+        <div class="slide">
+            <h2>Part XIV: Shooting the Weapon - Fundamentals</h2>
+            
+            <h3>B.R.A.S.S. - Key to Accurate Shooting</h3>
+            <ol>
+                <li><strong>B - Breathe</strong>
+                    <ul>
+                        <li>Take normal breath, exhale partially</li>
+                        <li>Hold remaining breath while aiming and shooting</li>
+                        <li>Don't hold breath more than 10 seconds</li>
+                        <li>If more time needed, release and repeat</li>
+                    </ul>
+                </li>
+                <li><strong>R - Relax</strong>
+                    <ul>
+                        <li>Tension causes poor shots</li>
+                        <li>Firm grip but relaxed body</li>
+                        <li>Don't anticipate recoil</li>
+                    </ul>
+                </li>
+                <li><strong>A - Aim</strong>
+                    <ul>
+                        <li>Proper sight alignment and sight picture</li>
+                        <li>Focus on front sight</li>
+                        <li>Target should be slightly fuzzy</li>
+                    </ul>
+                </li>
+                <li><strong>S - Slack</strong>
+                    <ul>
+                        <li>Take up trigger slack (free play)</li>
+                        <li>Prepare for smooth press</li>
+                    </ul>
+                </li>
+                <li><strong>S - Squeeze</strong>
+                    <ul>
+                        <li>Smooth, steady trigger press</li>
+                        <li>Should surprise you when gun fires</li>
+                        <li>Prevents jerking and flinching</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Stance</h3>
+            <ul>
+                <li><strong>Isosceles:</strong> Face target squarely, both arms extended equally</li>
+                <li><strong>Weaver:</strong> Bladed stance, push-pull with arms</li>
+                <li><strong>Modified Weaver:</strong> Combination of both</li>
+                <li>Feet shoulder-width apart, knees slightly bent</li>
+                <li>Lean slightly forward</li>
+                <li>Find what's comfortable and natural for YOU</li>
+            </ul>
+
+            <h3>Grip</h3>
+            <div class="success-box">
+                <strong>Proper grip is CRITICAL for accuracy and control</strong>
+            </div>
+            <ul>
+                <li>Grip as high on the backstrap as possible</li>
+                <li>Strong hand thumb along frame</li>
+                <li>Support hand fills gap, thumbs forward</li>
+                <li>Firm pressure - 60% support hand, 40% strong hand</li>
+                <li>Grip should stop trembling but not cause fatigue</li>
+                <li>Consistent grip every time</li>
+            </ul>
+        </div>
+
+        <!-- Slide 22: Shooting Fundamentals Part 2 -->
+        <div class="slide">
+            <h2>Shooting Fundamentals (Continued)</h2>
+            
+            <h3>Sight Picture</h3>
+            <p>For proper sight picture:</p>
+            <ul>
+                <li>Front sight top level with rear sight top</li>
+                <li>Equal white space (light bars) on each side of front sight</li>
+                <li>Front sight should appear to "sit" on target at 6 o'clock position</li>
+                <li><strong>Focus on FRONT SIGHT</strong> - target and rear sight will be slightly blurry</li>
+            </ul>
+
+            <h3>Sight Alignment</h3>
+            <ul>
+                <li>Most critical element of accurate shooting</li>
+                <li>Small error at sights = large miss at target</li>
+                <li>1/10 inch error at sights = 15 inch miss at 25 yards</li>
+                <li>Perfect alignment more important than perfect sight picture</li>
+            </ul>
+
+            <h3>Trigger Control</h3>
+            <p>Proper trigger control prevents disturbing sight alignment:</p>
+            <ul>
+                <li>Use pad of index finger (not joint, not tip)</li>
+                <li>Press straight to the rear</li>
+                <li>Smooth, steady increase in pressure</li>
+                <li>Should not know exact moment gun will fire</li>
+                <li>This prevents flinching and jerking</li>
+                <li>Follow through - maintain pressure after shot</li>
+                <li>Reset trigger for next shot</li>
+            </ul>
+
+            <h3>Common Shooting Errors</h3>
+            <table>
+                <tr>
+                    <th>Error</th>
+                    <th>Cause</th>
+                    <th>Correction</th>
+                </tr>
+                <tr>
+                    <td>Flinching/Anticipating</td>
+                    <td>Bracing for recoil before shot</td>
+                    <td>Focus on smooth trigger press, dry fire practice</td>
+                </tr>
+                <tr>
+                    <td>Jerking Trigger</td>
+                    <td>Too fast/hard trigger pull</td>
+                    <td>Slow, smooth press - surprise break</td>
+                </tr>
+                <tr>
+                    <td>Heeling</td>
+                    <td>Pushing with heel of hand</td>
+                    <td>Relax grip, focus on trigger finger only</td>
+                </tr>
+                <tr>
+                    <td>Thumbing</td>
+                    <td>Tightening thumb during trigger pull</td>
+                    <td>Relax thumb, keep along frame</td>
+                </tr>
+            </table>
+
+            <h3>Breathing Control</h3>
+            <ul>
+                <li>Breathing causes vertical movement of sights</li>
+                <li>Take normal breath</li>
+                <li>Exhale to comfortable position</li>
+                <li>Hold breath while taking shot</li>
+                <li>Don't hold longer than 10 seconds</li>
+                <li>If needed, breathe and start over</li>
+            </ul>
+
+            <h3>"Dry Firing" Practice</h3>
+            <ul>
+                <li>Practice trigger control without ammunition</li>
+                <li>ALWAYS verify gun is completely empty first</li>
+                <li>Remove ALL ammunition from area</li>
+                <li>Point at safe backstop (not walls or windows)</li>
+                <li>Excellent for developing trigger control and sight picture</li>
+                <li>Free practice you can do at home</li>
+            </ul>
+        </div>
+
+        <!-- Slide 23: Malfunctions and Safety Issues -->
+        <div class="slide">
+            <h2>Malfunctions and Safety Considerations</h2>
+            
+            <h3>Misfires and Hangfires</h3>
+            <div class="danger-box">
+                <strong>CRITICAL SAFETY:</strong> If gun doesn't fire when trigger is pulled:
+                <ol>
+                    <li>Keep gun pointed at target for 10 seconds</li>
+                    <li>Then carefully lower gun and call for assistance</li>
+                    <li>NEVER immediately open action - could be hangfire</li>
+                </ol>
+            </div>
+
+            <ul>
+                <li><strong>Misfire:</strong> Primer fails to ignite powder - gun doesn't fire</li>
+                <li><strong>Hangfire:</strong> Delayed ignition - may fire within 5 seconds</li>
+                <li>Treat EVERY failure to fire as potential hangfire</li>
+            </ul>
+
+            <h3>Common Semi-Automatic Malfunctions</h3>
+            <table>
+                <tr>
+                    <th>Malfunction</th>
+                    <th>Description</th>
+                    <th>Clearance</th>
+                </tr>
+                <tr>
+                    <td>Failure to Feed</td>
+                    <td>Round doesn't chamber</td>
+                    <td>Tap-Rack-Assess</td>
+                </tr>
+                <tr>
+                    <td>Failure to Eject</td>
+                    <td>Empty case stays in chamber</td>
+                    <td>Rack slide to eject</td>
+                </tr>
+                <tr>
+                    <td>Stovepipe</td>
+                    <td>Case caught in ejection port</td>
+                    <td>Sweep away and rack slide</td>
+                </tr>
+                <tr>
+                    <td>Double Feed</td>
+                    <td>Two rounds try to enter chamber</td>
+                    <td>Lock slide back, remove magazine, clear chamber</td>
+                </tr>
+            </table>
+
+            <h3>Ricochet Dangers</h3>
+            <p>Bullets can bounce off hard surfaces and travel in unpredictable directions:</p>
+            <ul>
+                <li>Pavement, concrete, or asphalt</li>
+                <li>Rocks or stones</li>
+                <li>Metal surfaces</li>
+                <li>Water (bullets can skip across water)</li>
+                <li>Building materials</li>
+            </ul>
+            <div class="warning-box">
+                <strong>Always consider:</strong> Where will the bullet go if it ricochets? Who or what is in that direction?
+            </div>
+
+            <h3>Over-Penetration/Pass-Through</h3>
+            <p>Bullets can pass through:</p>
+            <ul>
+                <li>Human bodies (especially with FMJ ammunition)</li>
+                <li>Interior walls (drywall offers minimal resistance)</li>
+                <li>Doors</li>
+                <li>Furniture</li>
+                <li>Multiple floors in buildings</li>
+            </ul>
+            <div class="danger-box">
+                <strong>You are responsible for EVERY bullet that leaves your gun</strong> - even if it passes through intended target and strikes someone else.
+            </div>
+
+            <h3>Warning Shots</h3>
+            <div class="danger-box">
+                <strong>WARNING SHOTS ARE:</strong>
+                <ul>
+                    <li>Dangerous - bullet must land somewhere</li>
+                <li>Illegal in most circumstances</li>
+                    <li>Tactically unsound - wastes ammunition</li>
+                    <li>Can escalate situation</li>
+                    <li><strong>NEVER FIRE WARNING SHOTS</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 24: Legal Scenarios -->
+        <div class="slide">
+            <h2>Legal Use of Force - Scenarios</h2>
+            
+            <div class="info-box">
+                <strong>Remember:</strong> Every situation is unique. These scenarios are for discussion only. You must make your own decisions based on the specific circumstances you face.
+            </div>
+
+            <h3>Scenario 1: Home Invasion</h3>
+            <p><strong>Situation:</strong> 2:00 AM, you hear glass breaking downstairs. You're upstairs with your family.</p>
+            <p><strong>Considerations:</strong></p>
+            <ul>
+                <li>Are you in immediate danger?</li>
+                <li>Can you secure your family in safe room and call 911?</li>
+                <li>Do you need to go downstairs or defend your position?</li>
+                <li>Do you have duty to retreat in your own home? (No - Castle Doctrine)</li>
+                <li>Can you reasonably believe intruder poses threat of death or serious injury?</li>
+            </ul>
+
+            <h3>Scenario 2: Parking Lot Carjacking</h3>
+            <p><strong>Situation:</strong> Someone approaches with knife demanding your car keys.</p>
+            <p><strong>Considerations:</strong></p>
+            <ul>
+                <li>Is knife displayed deadly force? (Yes)</li>
+                <li>Are you in immediate danger? (Likely yes)</li>
+                <li>Is car worth your life? (No)</li>
+                <li>Can you escape safely by giving keys? (Possibly)</li>
+                <li>Are there children in the car? (Changes analysis)</li>
+                <li>Are you being forced into vehicle? (Never go to secondary location)</li>
+            </ul>
+
+            <h3>Scenario 3: Confrontation at Gas Station</h3>
+            <p><strong>Situation:</strong> Argument escalates, person becomes aggressive and threatening but unarmed.</p>
+            <p><strong>Considerations:</strong></p>
+            <ul>
+                <li>Is verbal threat sufficient for deadly force? (No)</li>
+                <li>Are you the initial aggressor? (Loses justification)</li>
+                <li>Can you leave the area? (Always best option)</li>
+                <li>Are you in reasonable fear of death/serious injury? (Unlikely if unarmed)</li>
+                <li>Would displaying gun escalate situation? (Probably)</li>
+            </ul>
+
+            <h3>Scenario 4: Witnessing Armed Robbery</h3>
+            <p><strong>Situation:</strong> You see someone robbing convenience store at gunpoint.</p>
+            <p><strong>Considerations:</strong></p>
+            <ul>
+                <li>Are YOU in immediate danger? (Maybe not)</li>
+                <li>Can you defend others under A.C.A. Â§ 5-2-607? (Yes, if reasonable belief of threat)</li>
+                <li>Is property worth taking life? (No)</li>
+                <li>Could your intervention make situation worse?</li>
+                <li>Are you sure who the aggressor is?</li>
+                <li>Could you be mistaken for the criminal by police?</li>
+                <li><strong>Best action: Be good witness, call 911</strong></li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Key Principles:</strong>
+                <ul>
+                    <li>Avoidance is always best option</li>
+                    <li>Your gun is to protect life, not property</li>
+                    <li>Consider consequences before acting</li>
+                    <li>Be absolutely certain deadly force is justified</li>
+                    <li>When in doubt, do NOT shoot</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 25: Responsibilities and Conclusion -->
+        <div class="slide">
+            <h2>Responsibilities of License Holders</h2>
+            
+            <h3>Legal Responsibilities</h3>
+            <ul>
+                <li>Know and obey ALL applicable laws (state, federal, local)</li>
+                <li>Stay current on law changes</li>
+                <li>Carry license whenever carrying handgun</li>
+                <li>Present license when requested by law enforcement (if carrying)</li>
+                <li>Notify law enforcement you're armed (if carrying)</li>
+                <li>Report any disqualifying events to ASP within 10 days</li>
+                <li>Renew license before expiration</li>
+                <li>Notify ASP of address changes within 30 days</li>
+            </ul>
+
+            <h3>Moral and Ethical Responsibilities</h3>
+            <ul>
+                <li>Treat firearm ownership as serious responsibility</li>
+                <li>Continue training and education</li>
+                <li>Practice regularly to maintain proficiency</li>
+                <li>Secure firearms from unauthorized access</li>
+                <li>Set good example for other gun owners</li>
+                <li>Avoid confrontations and dangerous situations</li>
+                <li>Never drink alcohol while carrying</li>
+                <li>Be sober ambassador for 2nd Amendment rights</li>
+            </ul>
+
+            <h3>Continuing Education</h3>
+            <p>Your training doesn't end with this course:</p>
+            <ul>
+                <li>Take advanced training courses</li>
+                <li>Practice regularly at the range</li>
+                <li>Study use of force laws and court cases</li>
+                <li>Consider force-on-force scenario training</li>
+                <li>Join shooting organizations (USCCA, NRA, etc.)</li>
+                <li>Stay informed about legal changes</li>
+            </ul>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><strong>Arkansas State Police CHCL:</strong> https://www.dps.arkansas.gov (CHCL section)</li>
+                <li><strong>Arkansas Code:</strong> http://www.lexisnexis.com/hottopics/arcode/</li>
+                <li><strong>Court Opinions:</strong> https://www.arcourts.gov/</li>
+                <li><strong>USCCA:</strong> Self-defense insurance and education</li>
+                <li><strong>Handgunlaw.us:</strong> State-by-state carry information</li>
+            </ul>
+
+            <h3>Final Thoughts</h3>
+            <div class="success-box">
+                <p>Carrying a concealed handgun is a serious responsibility that should not be taken lightly. With your license comes great power and great responsibility.</p>
+                <ul>
+                    <li>Your goal is to AVOID having to use your firearm</li>
+                    <li>Be aware of your surroundings</li>
+                    <li>Avoid dangerous situations</li>
+                    <li>De-escalate confrontations</li>
+                    <li>Use deadly force only as absolute last resort</li>
+                    <li>If you must shoot, shoot to stop the threat</li>
+                    <li>Call 911 immediately after any defensive use</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Next Steps</h3>
+                <ol>
+                    <li>Complete and pass the live-fire qualification</li>
+                    <li>Complete your application (online preferred)</li>
+                    <li>Submit fingerprints electronically or via mail</li>
+                    <li>Pay required fees</li>
+                    <li>Wait for background check and approval</li>
+                    <li>Receive your license (typically within 120 days)</li>
+                </ol>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+                <h2 style="color: #2c3e50; border: none;">Thank You!</h2>
+                <p style="font-size: 1.2em; color: #555;">Questions?</p>
+                <p style="margin-top: 20px;">Good luck with your qualification and stay safe!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <button id="prevBtn" onclick="changeSlide(-1)">â† Previous</button>
+        <span class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">25</span>
+        </span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next â†’</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n > totalSlides) currentSlide = totalSlides;
+            if (n < 1) currentSlide = 1;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+            
+            document.getElementById('currentSlide').textContent = currentSlide;
+            
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft') changeSlide(-1);
+            if (event.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkansas Enhanced CHCL Course - Advanced Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .enhanced-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            min-height: 500px;
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #764ba2;
+            border-bottom: 3px solid #f5576c;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 20px 0 15px;
+            font-size: 1.5em;
+        }
+
+        h4 {
+            color: #555;
+            margin: 15px 0 10px;
+            font-size: 1.2em;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .important-box {
+            background: #ffebee;
+            border-left: 5px solid #f44336;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .enhanced-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 5px solid #764ba2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .nav-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.5);
+        }
+
+        .nav-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-weight: bold;
+            color: #764ba2;
+            padding: 0 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .back-home {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .back-home a {
+            background: white;
+            color: #764ba2;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .back-home a:hover {
+            transform: scale(1.05);
+        }
+
+        @media print {
+            .navigation, .back-home {
+                display: none;
+            }
+            .slide {
+                display: block !important;
+                page-break-after: always;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .slide {
+                padding: 25px;
+                min-height: auto;
+            }
+            .navigation {
+                width: 90%;
+                padding: 12px 20px;
+            }
+            .nav-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-home">
+        <a href="arkansas-chcl-course.html">← Home</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="enhanced-badge">ENHANCED COURSE</div>
+            <h1>Arkansas Enhanced CHCL Course</h1>
+            <p>Advanced Concealed Carry Training (8 Hours Total)</p>
+            <p>Wes Milam, AR CHCL Instructor #24-1604</p>
+        </div>
+
+        <!-- Slide 1: Welcome -->
+        <div class="slide active">
+            <h2>Welcome to Enhanced CHCL Training</h2>
+            <div class="enhanced-box">
+                <h3>🎯 Enhanced Course Overview</h3>
+                <p><strong>Total Training Time:</strong> 8 Hours (5 Hours Basic + 3 Hours Enhanced)</p>
+                <p><strong>Instructor:</strong> Wes Milam, AR CHCL Instructor #24-1604</p>
+            </div>
+
+            <h3>What Makes This Course "Enhanced"?</h3>
+            <p>The Enhanced CHCL course builds upon the foundation of the Basic CHCL course with an additional three hours of advanced training. This enhanced certification allows you to carry in additional locations and demonstrates a higher level of proficiency.</p>
+
+            <div class="info-box">
+                <h4>Enhanced Benefits Include:</h4>
+                <ul>
+                    <li>Carry at public universities and colleges (with certain restrictions)</li>
+                    <li>Additional locations beyond basic CHCL</li>
+                    <li>More comprehensive training in tactics and situational awareness</li>
+                    <li>Enhanced qualification standards</li>
+                    <li>Demonstrated commitment to responsible carry</li>
+                </ul>
+            </div>
+
+            <h3>Course Completion Requirements</h3>
+            <ol>
+                <li>Complete all 8 hours of instruction (5 basic + 3 enhanced)</li>
+                <li>Pass the enhanced live fire qualification</li>
+                <li>Demonstrate safe firearm handling throughout</li>
+                <li>Complete all required exercises and scenarios</li>
+                <li>Pass written examination</li>
+            </ol>
+        </div>
+
+        <!-- Slide 2: Basic Review -->
+        <div class="slide">
+            <h2>Basic CHCL Review</h2>
+            <p>Before we dive into enhanced topics, let's briefly review the key components from the Basic CHCL course:</p>
+
+            <h3>Core Topics Covered in Basic Course</h3>
+            <div class="enhanced-box">
+                <ul>
+                    <li><strong>Arkansas Concealed Carry Laws</strong> - Legal framework and requirements</li>
+                    <li><strong>Prohibited Locations</strong> - Where you cannot carry under basic CHCL</li>
+                    <li><strong>Use of Force</strong> - Legal standards and principles</li>
+                    <li><strong>Safe Handling</strong> - Four rules of firearm safety</li>
+                    <li><strong>Basic Qualification</strong> - 50 rounds at various distances</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <strong>Important:</strong> Everything in the Basic course still applies. The Enhanced course adds to, but does not replace, your Basic CHCL knowledge and responsibilities.
+            </div>
+
+            <h3>Enhanced Course Builds Upon</h3>
+            <p>The enhanced training takes these fundamentals and expands them with:</p>
+            <ul>
+                <li>Advanced tactical considerations</li>
+                <li>More complex legal scenarios</li>
+                <li>Enhanced marksmanship standards</li>
+                <li>Additional situational awareness training</li>
+                <li>Extended classroom and range time</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Enhanced Carry Locations -->
+        <div class="slide">
+            <h2>Enhanced Carry Locations</h2>
+            <div class="enhanced-box">
+                <h3>Where Enhanced CHCL Allows Carry</h3>
+                <p>With an Enhanced CHCL, you may carry concealed handguns in certain additional locations beyond the Basic CHCL.</p>
+            </div>
+
+            <h3>Public Universities and Colleges (Act 859 of 2017)</h3>
+            <div class="info-box">
+                <h4>Enhanced Carriers May Carry At:</h4>
+                <ul>
+                    <li>Public universities and community colleges in Arkansas</li>
+                    <li>Must be concealed at all times</li>
+                    <li>Must have Enhanced CHCL, not just Basic</li>
+                    <li>Subject to certain restrictions (see below)</li>
+                </ul>
+            </div>
+
+            <h3>University Carry Restrictions</h3>
+            <div class="warning-box">
+                <strong>Still Prohibited Even with Enhanced CHCL:</strong>
+                <ul>
+                    <li>Athletic events (stadiums, arenas during events)</li>
+                    <li>Disciplinary proceedings</li>
+                    <li>Faculty/staff meetings where disciplinary matters are discussed</li>
+                    <li>Areas where federal law prohibits (research facilities, etc.)</li>
+                    <li>Posted buildings (if properly posted)</li>
+                </ul>
+            </div>
+
+            <h3>Other Enhanced Locations</h3>
+            <p>Enhanced CHCL may also provide access to:</p>
+            <ul>
+                <li>Certain state facilities (check specific regulations)</li>
+                <li>Additional public buildings (varies by policy)</li>
+                <li>Some previously restricted areas (verify current law)</li>
+            </ul>
+
+            <div class="important-box">
+                <strong>Critical Reminder:</strong> Always verify current laws and policies. Property owners can still prohibit carry with proper posting. When in doubt, don't carry or contact legal counsel.
+            </div>
+        </div>
+
+        <!-- Slide 4: Advanced Use of Force -->
+        <div class="slide">
+            <h2>Advanced Use of Force Considerations</h2>
+            <p>The Enhanced course deepens your understanding of when and how deadly force may be legally justified.</p>
+
+            <h3>Elements of Self-Defense (Detailed Review)</h3>
+            <div class="enhanced-box">
+                <h4>1. Immediate Threat</h4>
+                <ul>
+                    <li>Threat must be happening now (not past or future)</li>
+                    <li>Must be more than mere words or gestures</li>
+                    <li>Must demonstrate clear intent and ability to cause harm</li>
+                </ul>
+
+                <h4>2. Reasonable Belief of Death or Serious Injury</h4>
+                <ul>
+                    <li>Would a reasonable person in your shoes believe death or serious injury was imminent?</li>
+                    <li>Consider totality of circumstances</li>
+                    <li>Disparity of force considerations (size, age, numbers, weapons)</li>
+                </ul>
+
+                <h4>3. No Duty to Retreat (Stand Your Ground)</h4>
+                <ul>
+                    <li>Arkansas is a "stand your ground" state</li>
+                    <li>No duty to retreat if you are in a place you have a legal right to be</li>
+                    <li>Cannot claim self-defense if you are the initial aggressor</li>
+                    <li>Cannot claim self-defense during commission of a felony</li>
+                </ul>
+
+                <h4>4. Proportional Response</h4>
+                <ul>
+                    <li>Deadly force can only be met with deadly force</li>
+                    <li>Cannot use deadly force to protect property alone</li>
+                    <li>Response must be reasonable and necessary</li>
+                </ul>
+            </div>
+
+            <h3>Complex Scenarios</h3>
+            <div class="warning-box">
+                <strong>Scenario Analysis:</strong> In the Enhanced course, we examine multiple complex scenarios to test your understanding of when force is and is not justified. Every situation is different, and legal justification depends on specific facts.
+            </div>
+        </div>
+
+        <!-- Slide 5: Threat Assessment & Awareness -->
+        <div class="slide">
+            <h2>Enhanced Threat Assessment</h2>
+            <p>Advanced situational awareness and threat recognition skills are critical for responsible concealed carry.</p>
+
+            <h3>Cooper's Color Codes (Applied)</h3>
+            <table>
+                <tr>
+                    <th>Condition</th>
+                    <th>Description</th>
+                    <th>Mindset</th>
+                </tr>
+                <tr>
+                    <td><strong>White</strong></td>
+                    <td>Unaware, unprepared</td>
+                    <td>Avoid this condition when carrying</td>
+                </tr>
+                <tr>
+                    <td><strong>Yellow</strong></td>
+                    <td>Relaxed alert</td>
+                    <td>Normal awareness - where you should be</td>
+                </tr>
+                <tr>
+                    <td><strong>Orange</strong></td>
+                    <td>Specific alert</td>
+                    <td>Potential threat identified</td>
+                </tr>
+                <tr>
+                    <td><strong>Red</strong></td>
+                    <td>Fight mode</td>
+                    <td>Immediate threat - action required</td>
+                </tr>
+            </table>
+
+            <h3>Pre-Attack Indicators</h3>
+            <div class="enhanced-box">
+                <h4>Behavioral Indicators:</h4>
+                <ul>
+                    <li>Target glancing (checking for witnesses/cameras)</li>
+                    <li>Positioning to attack (closing distance, flanking)</li>
+                    <li>Blade behavior (turning body to protect weapon side)</li>
+                    <li>Pre-assault dialogue (interview tactics)</li>
+                    <li>Furtive movements (reaching, adjusting clothing)</li>
+                </ul>
+            </div>
+
+            <h3>The OODA Loop</h3>
+            <div class="info-box">
+                <p><strong>Observe → Orient → Decide → Act</strong></p>
+                <ul>
+                    <li><strong>Observe:</strong> Gather information from your environment</li>
+                    <li><strong>Orient:</strong> Analyze the situation based on experience and training</li>
+                    <li><strong>Decide:</strong> Determine the best course of action</li>
+                    <li><strong>Act:</strong> Execute your decision</li>
+                </ul>
+                <p>The person who completes their OODA loop faster typically prevails in a confrontation.</p>
+            </div>
+
+            <h3>Avoidance is Best</h3>
+            <p>The best gunfight is the one you never get into. Use awareness to:</p>
+            <ul>
+                <li>Identify potential threats early</li>
+                <li>Create distance and barriers</li>
+                <li>Choose different routes or locations</li>
+                <li>Call for help/backup</li>
+                <li>De-escalate when possible</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Advanced Tactics -->
+        <div class="slide">
+            <h2>Advanced Defensive Tactics</h2>
+            <p>Enhanced training includes practical skills for various defensive scenarios.</p>
+
+            <h3>Drawing from Concealment</h3>
+            <div class="enhanced-box">
+                <h4>Proper Draw Sequence:</h4>
+                <ol>
+                    <li><strong>Clear garment:</strong> Move covering garment away from firearm</li>
+                    <li><strong>Establish grip:</strong> Get full firing grip on the pistol</li>
+                    <li><strong>Clear holster:</strong> Draw straight up out of holster</li>
+                    <li><strong>Rotate/Index:</strong> Rotate muzzle toward target as you bring gun up</li>
+                    <li><strong>Two-hand grip:</strong> Support hand meets gun</li>
+                    <li><strong>Extend:</strong> Push out to target with sight picture</li>
+                    <li><strong>Fire:</strong> When sights are on target and decision is made</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <strong>Safety Note:</strong> Practice draw strokes with an unloaded firearm (triple check!) in a safe environment. Never draw faster than you can safely execute.
+            </div>
+
+            <h3>Shooting Positions</h3>
+            <ul>
+                <li><strong>Isosceles:</strong> Square to target, both arms extended equally</li>
+                <li><strong>Weaver:</strong> Bladed stance, push-pull arm tension</li>
+                <li><strong>Modified Weaver:</strong> Hybrid position, arms approximately equal</li>
+                <li><strong>Close retention:</strong> Gun held close to body in close quarters</li>
+                <li><strong>One-handed shooting:</strong> Strong or weak hand only</li>
+            </ul>
+
+            <h3>Cover vs. Concealment</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Definition</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td><strong>Cover</strong></td>
+                    <td>Stops bullets</td>
+                    <td>Brick walls, engine blocks, large trees, concrete barriers</td>
+                </tr>
+                <tr>
+                    <td><strong>Concealment</strong></td>
+                    <td>Hides you visually only</td>
+                    <td>Bushes, car doors, drywall, furniture</td>
+                </tr>
+            </table>
+
+            <div class="important-box">
+                <strong>Remember:</strong> If you can see through it, a bullet can probably go through it. Seek actual cover when possible, not just concealment.
+            </div>
+
+            <h3>Movement Principles</h3>
+            <ul>
+                <li>Move to cover, not just for movement's sake</li>
+                <li>A moving target is harder to hit</li>
+                <li>Don't move in predictable patterns</li>
+                <li>Maintain awareness of surroundings while moving</li>
+                <li>Balance speed with maintaining ability to shoot accurately</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Aftermath of Shooting -->
+        <div class="slide">
+            <h2>After a Defensive Shooting</h2>
+            <p>Knowing what to do immediately after a defensive shooting incident is crucial.</p>
+
+            <h3>Immediate Actions</h3>
+            <div class="enhanced-box">
+                <h4>Step 1: Ensure Safety</h4>
+                <ul>
+                    <li>Scan for additional threats</li>
+                    <li>Move to cover if needed</li>
+                    <li>Don't assume the threat is neutralized</li>
+                    <li>Keep gun ready but finger off trigger</li>
+                </ul>
+
+                <h4>Step 2: Call 911</h4>
+                <ul>
+                    <li>Report that shots were fired</li>
+                    <li>Request police and medical assistance</li>
+                    <li>Describe yourself (so police don't mistake you for the threat)</li>
+                    <li>Keep it brief - "I was attacked, I defended myself, please send help"</li>
+                </ul>
+
+                <h4>Step 3: Secure the Scene</h4>
+                <ul>
+                    <li>Holster your weapon when it's safe to do so</li>
+                    <li>Do not leave the scene (unless continuing danger)</li>
+                    <li>Do not touch or move evidence</li>
+                    <li>Point out witnesses and evidence to police</li>
+                </ul>
+            </div>
+
+            <h3>When Police Arrive</h3>
+            <div class="warning-box">
+                <strong>Critical Actions:</strong>
+                <ul>
+                    <li>Follow all commands immediately</li>
+                    <li>Keep hands visible at all times</li>
+                    <li>Announce that you are the victim/defender</li>
+                    <li>Announce that you are armed (if not already holstered)</li>
+                    <li>Do not reach for your weapon - let them disarm you</li>
+                </ul>
+            </div>
+
+            <h3>Your Statement to Police</h3>
+            <div class="important-box">
+                <h4>What to Say:</h4>
+                <ul>
+                    <li>"I was in fear for my life"</li>
+                    <li>"I was attacked and had to defend myself"</li>
+                    <li>"I will cooperate fully after I speak with my attorney"</li>
+                    <li>Point out evidence and witnesses</li>
+                    <li>Sign the complaint against your attacker</li>
+                </ul>
+
+                <h4>What NOT to Say:</h4>
+                <ul>
+                    <li>Don't give a detailed statement without legal counsel</li>
+                    <li>Don't speculate about what you think happened</li>
+                    <li>Don't say "I didn't mean to shoot" or similar</li>
+                    <li>Don't make jokes or off-hand comments</li>
+                    <li>Don't discuss your training or shooting experience</li>
+                </ul>
+            </div>
+
+            <h3>Get Legal Help Immediately</h3>
+            <p>Even a justified shooting will result in a thorough investigation. You need legal representation. Consider:</p>
+            <ul>
+                <li>Having a lawyer's contact information with you</li>
+                <li>Self-defense insurance (USCCA, CCW Safe, etc.)</li>
+                <li>Don't give detailed statements until advised by counsel</li>
+                <li>Remember: you have the right to remain silent - use it wisely</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Enhanced Qualification Requirements -->
+        <div class="slide">
+            <h2>Enhanced Live Fire Qualification</h2>
+            <p>The Enhanced CHCL requires more stringent qualification standards than the Basic course.</p>
+
+            <h3>Enhanced Qualification Standards</h3>
+            <div class="enhanced-box">
+                <h4>Ammunition Required:</h4>
+                <p><strong>Total: 50 rounds</strong> (must be 9mm or larger caliber)</p>
+
+                <h4>Course of Fire:</h4>
+                <table>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Distance</th>
+                        <th>Rounds</th>
+                        <th>Time Limit</th>
+                        <th>Position</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3 yards</td>
+                        <td>5</td>
+                        <td>10 seconds</td>
+                        <td>Two-handed</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>5 yards</td>
+                        <td>5</td>
+                        <td>10 seconds</td>
+                        <td>Strong hand only</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>7 yards</td>
+                        <td>10</td>
+                        <td>20 seconds</td>
+                        <td>Two-handed</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10 yards</td>
+                        <td>10</td>
+                        <td>30 seconds</td>
+                        <td>Two-handed</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>15 yards</td>
+                        <td>10</td>
+                        <td>45 seconds</td>
+                        <td>Two-handed</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7 yards</td>
+                        <td>5</td>
+                        <td>15 seconds</td>
+                        <td>Weak hand only</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>5 yards</td>
+                        <td>5</td>
+                        <td>10 seconds</td>
+                        <td>From holster</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Passing Score</h3>
+            <div class="info-box">
+                <p><strong>Minimum Score: 70% (35 out of 50 rounds on target)</strong></p>
+                <ul>
+                    <li>All shots must hit the silhouette target</li>
+                    <li>Shots outside the silhouette count as misses</li>
+                    <li>Must complete all stages within time limits</li>
+                    <li>Must demonstrate safe handling throughout</li>
+                    <li>Any unsafe gun handling results in immediate disqualification</li>
+                </ul>
+            </div>
+
+            <h3>What to Bring to Qualification</h3>
+            <ul>
+                <li>Your handgun (9mm or larger caliber recommended)</li>
+                <li>50 rounds of ammunition (bring extra in case of need)</li>
+                <li>Eye protection (ANSI rated)</li>
+                <li>Ear protection (electronic recommended)</li>
+                <li>Holster appropriate for your carry method</li>
+                <li>Magazine holders/spare magazines</li>
+                <li>Hat/cap (optional but recommended)</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Safety Requirement:</strong> Any violation of the four rules of gun safety during qualification will result in immediate removal from the range and failure of the course.
+            </div>
+        </div>
+
+        <!-- Slide 9: Ongoing Training -->
+        <div class="slide">
+            <h2>Continuing Education & Training</h2>
+            <p>Getting your Enhanced CHCL is just the beginning. Ongoing training is essential for maintaining skills and staying current with laws.</p>
+
+            <h3>Practice Recommendations</h3>
+            <div class="enhanced-box">
+                <h4>Minimum Practice Schedule:</h4>
+                <ul>
+                    <li><strong>Dry fire practice:</strong> 10-15 minutes, 3-4 times per week</li>
+                    <li><strong>Live fire practice:</strong> At least once per month</li>
+                    <li><strong>Training courses:</strong> At least one per year</li>
+                    <li><strong>Review of laws:</strong> Quarterly check for updates</li>
+                </ul>
+            </div>
+
+            <h3>Skills to Maintain</h3>
+            <ul>
+                <li>Draw stroke from concealment</li>
+                <li>Rapid accurate fire at close distances</li>
+                <li>Precision shooting at distance</li>
+                <li>Shooting with one hand (strong and weak)</li>
+                <li>Shooting from various positions</li>
+                <li>Malfunction clearances</li>
+                <li>Emergency reloads</li>
+            </ul>
+
+            <h3>Advanced Training Opportunities</h3>
+            <div class="info-box">
+                <p>Consider these advanced courses to continue your education:</p>
+                <ul>
+                    <li>Advanced pistol courses</li>
+                    <li>Low-light shooting</li>
+                    <li>Force-on-force training</li>
+                    <li>Medical training (Stop the Bleed, CPR)</li>
+                    <li>Legal updates and seminars</li>
+                    <li>Competition shooting (IDPA, USPSA)</li>
+                </ul>
+            </div>
+
+            <h3>Staying Current with Law Changes</h3>
+            <p>Laws can and do change. Stay informed through:</p>
+            <ul>
+                <li>Arkansas State Police website updates</li>
+                <li>Firearms law organizations (NRA, USCCA, etc.)</li>
+                <li>Your attorney or legal insurance provider</li>
+                <li>Refresher courses every 2-3 years</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10: Conclusion -->
+        <div class="slide">
+            <h2>Course Conclusion</h2>
+            <div class="enhanced-box">
+                <h3>Congratulations!</h3>
+                <p>You have completed the Arkansas Enhanced CHCL Course. This represents 8 hours of comprehensive training in concealed carry laws, tactics, and marksmanship.</p>
+            </div>
+
+            <h3>Next Steps</h3>
+            <ol>
+                <li><strong>Complete Live Fire Qualification</strong> - Must score 70% or better</li>
+                <li><strong>Receive Certificate of Completion</strong> - Provided after successful qualification</li>
+                <li><strong>Submit Application to Arkansas State Police</strong>
+                    <ul>
+                        <li>Complete application form</li>
+                        <li>Include certificate of completion</li>
+                        <li>Pay required fees</li>
+                        <li>Submit fingerprints</li>
+                    </ul>
+                </li>
+                <li><strong>Wait for Background Check</strong> - Typically 60-90 days</li>
+                <li><strong>Receive Your Enhanced CHCL</strong> - Valid for 5 years</li>
+            </ol>
+
+            <h3>Important Reminders</h3>
+            <div class="warning-box">
+                <ul>
+                    <li>Your Enhanced CHCL is valid for 5 years from date of issue</li>
+                    <li>You must carry your license with you whenever carrying concealed</li>
+                    <li>You must present your license to law enforcement upon request</li>
+                    <li>Notify ASP within 30 days of address change</li>
+                    <li>Renewal requires refresher training before expiration</li>
+                </ul>
+            </div>
+
+            <h3>Final Thoughts</h3>
+            <div class="info-box">
+                <p><strong>Carrying a concealed handgun is a serious responsibility.</strong></p>
+                <p>You now have the legal right and the training to protect yourself and your loved ones. With this right comes the responsibility to:</p>
+                <ul>
+                    <li>Maintain your skills through regular practice</li>
+                    <li>Stay current with law changes</li>
+                    <li>Exercise good judgment in when and where to carry</li>
+                    <li>Always prioritize avoidance and de-escalation</li>
+                    <li>Carry responsibly and legally</li>
+                </ul>
+            </div>
+
+            <h3>Contact Information</h3>
+            <div class="enhanced-box">
+                <p><strong>Wes Milam</strong><br>
+                AR CHCL Instructor #24-1604<br>
+                Fort Smith, Arkansas</p>
+                <p>For questions or additional training, please contact me through the information provided at enrollment.</p>
+            </div>
+
+            <div class="important-box">
+                <h4>🎯 Stay Safe, Train Hard, Carry Responsibly</h4>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation">
+            <button class="nav-button" onclick="previousSlide()" id="prevBtn">← Previous</button>
+            <span class="slide-counter" id="slideCounter">1 / 10</span>
+            <button class="nav-button" onclick="nextSlide()" id="nextBtn">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            if (n < 0) currentSlide = 0;
+            
+            slides[currentSlide].classList.add('active');
+            updateNavigation();
+            window.scrollTo(0, 0);
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+
+        function updateNavigation() {
+            document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
