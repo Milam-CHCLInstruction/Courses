@@ -149,7 +149,7 @@
             Fort Smith, Arkansas
         </div>
 
-        <form id="loginForm" onsubmit="checkPassword(event)">
+        <form id="loginForm">
             <div class="form-group">
                 <label for="password">Enter Course Password:</label>
                 <input 
@@ -159,6 +159,9 @@
                     placeholder="Enter instructor password"
                     required
                     autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
                 >
             </div>
 
@@ -179,32 +182,40 @@
     </div>
 
     <script>
-        function checkPassword(event) {
-            event.preventDefault();
-            
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('errorMessage');            
-            const correctPassword = "Flynn's Arcade";
-            
-            if (password === correctPassword) {
-                // Password correct - redirect to presentation
-                window.location.href = 'basic-presentation.html';
-            } else {
-                // Show error message
-                errorMessage.style.display = 'block';
-                document.getElementById('password').value = '';
-                document.getElementById('password').focus();
-                
-                // Hide error after 3 seconds
-                setTimeout(() => {
-                    errorMessage.style.display = 'none';
-                }, 3000);
-            }
+        // Change the password here
+        const CORRECT_PASSWORD = "Flynn's Arcade";
+        // Page to open after a correct password (must match the file name in the repo exactly)
+        const DESTINATION = "basic-presentation.html";
+
+        // Converts curly quotes/apostrophes to straight ones and trims spaces,
+        // so phone/Mac "smart punctuation" doesn't cause a mismatch
+        function normalize(text) {
+            return text
+                .replace(/[\u2018\u2019\u201A\u201B\u2032\u0060\u00B4]/g, "'")
+                .replace(/[\u201C\u201D\u201E\u201F\u2033]/g, '"')
+                .replace(/\s+/g, " ")
+                .trim();
         }
 
-        // Clear error message when user starts typing
-        document.getElementById('password').addEventListener('input', function() {
-            document.getElementById('errorMessage').style.display = 'none';
+        const form = document.getElementById('loginForm');
+        const passwordInput = document.getElementById('password');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (normalize(passwordInput.value) === normalize(CORRECT_PASSWORD)) {
+                window.location.href = DESTINATION;
+            } else {
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+                setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            }
+        });
+
+        passwordInput.addEventListener('input', function () {
+            errorMessage.style.display = 'none';
         });
     </script>
 </body>
